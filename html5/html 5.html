@@ -1,0 +1,118 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 &amp; CSS3</title>
+	 <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            margin: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: #e74c3c;
+        }
+
+        .gradient-box {
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            background: linear-gradient(to right, #3498db, #e74c3c);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .rounded-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .rounded-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+ <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is a sample article content.</p>
+        </article>
+
+        <article>
+            <h2>Another Article Title</h2>
+            <p>This is another sample article content.</p>
+        </article>
+    </section>
+
+    <aside>
+        <h2>Aside Section</h2>
+        <p>This is additional content or a sidebar.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas><br>
+
+    <script>
+        // JavaScript code to draw on the canvas
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio><br>
+	
+	<video controls loop height="450" width="700" poster="video.mp4">
+		<source src="video.mp4">
+	</video>
+	<div class="box">
+        <h2>CSS3 Box</h2>
+        <p>This is a box with rounded corners, a box shadow, and a hover effect.</p>
+    </div>
+
+    <div class="gradient-box">
+        <h2>Gradient Box</h2>
+        <p>This box has a gradient background and a box shadow.</p>
+    </div>
+
+    <div class="rounded-image">
+        <img src="example-image.jpg" alt="Example Image">
+    </div>
+</body>
+</html>
