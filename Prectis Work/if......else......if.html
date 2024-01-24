@@ -1,0 +1,48 @@
+<html>
+<body>
+<script language="JavaScript" type="text/JavaScript">
+//result
+	var net, cf, cs, cl, tot, avg;
+	net = parseInt(prompt("enter a mark of Networking : "));
+	cf = parseInt(prompt("enter a mark of Computer Fundamental : "));
+	cs = parseInt(prompt("enter a mark of Communication Skil : "));
+	cl = parseInt(prompt("enter a mark of Computer Language : "));
+
+	document.write("Networking = " + net + "<br>");
+	document.write("Computer Fundamental = " + cf + "<br>");
+	document.write("Communication Skil = " + cs + "<br>");
+	document.write("Computer Language = " + cl + "<br>");
+
+	if(net>=40 && cf>=40 && cs>=40 && cl>=40)
+	{
+		tot = parseInt(net + cf + cs + cl);
+		avg = parseInt(tot / 4);
+		document.write("total = " + tot + "<br>");
+		document.write("avarage = " + avg + "<br>");
+
+		if(avg>90 && avg<=100)
+		{
+			document.write("Distinction");
+		}
+		else if(avg>80 && avg<=90)
+		{
+			document.write("Grade - A");
+		}
+		else if(avg>70 && avg<=80)
+		{
+			document.write("Grade - b");
+		}
+		else
+		{
+			document.write("Grade - C");
+		}
+
+	}
+	else
+	{
+		document.write("You are fail try again next year");
+	}
+	
+</script>
+</body>
+</html>
