@@ -1,0 +1,364 @@
+1
+00:00:00,05 --> 00:00:01,08
+- [Instructor] One of the most interesting things
+
+2
+00:00:01,08 --> 00:00:05,00
+about CSS transforms is how easily they allow us
+
+3
+00:00:05,00 --> 00:00:07,06
+to create the effect of 3D.
+
+4
+00:00:07,06 --> 00:00:08,08
+I'll be touching on the basics
+
+5
+00:00:08,08 --> 00:00:10,08
+of 3D transforms in this video,
+
+6
+00:00:10,08 --> 00:00:13,03
+but there are other CSS courses in the library
+
+7
+00:00:13,03 --> 00:00:16,03
+that cover this in much more depth as well.
+
+8
+00:00:16,03 --> 00:00:17,07
+Getting to 3D in CSS
+
+9
+00:00:17,07 --> 00:00:19,09
+can be as straightforward as just rotating
+
+10
+00:00:19,09 --> 00:00:21,07
+around the x or y-axis.
+
+11
+00:00:21,07 --> 00:00:24,00
+Doing that angles part of the object
+
+12
+00:00:24,00 --> 00:00:25,06
+on screen away from you
+
+13
+00:00:25,06 --> 00:00:28,04
+and that makes you get a 3D effect.
+
+14
+00:00:28,04 --> 00:00:30,09
+I'll use this robot image to demonstrate.
+
+15
+00:00:30,09 --> 00:00:33,07
+It's just an image sitting in a HTML page,
+
+16
+00:00:33,07 --> 00:00:37,05
+but I can still apply 3D transforms to it.
+
+17
+00:00:37,05 --> 00:00:38,08
+In my CSS file,
+
+18
+00:00:38,08 --> 00:00:41,03
+I'll add a transform rule to our robot image.
+
+19
+00:00:41,03 --> 00:00:43,00
+So we will transform this
+
+20
+00:00:43,00 --> 00:00:50,07
+and we will give it a rotation on the x-axis of 45 degrees.
+
+21
+00:00:50,07 --> 00:00:54,03
+In browsers, the x-axis is the one that runs horizontally,
+
+22
+00:00:54,03 --> 00:00:57,04
+so it's essentially like we are rotating around a pole
+
+23
+00:00:57,04 --> 00:01:00,03
+going through the middle of this image.
+
+24
+00:01:00,03 --> 00:01:04,00
+If we save this and preview it in our browser,
+
+25
+00:01:04,00 --> 00:01:06,08
+it may not be exactly what you were expecting.
+
+26
+00:01:06,08 --> 00:01:08,06
+It looks a little bit misshapen
+
+27
+00:01:08,06 --> 00:01:11,02
+and not quite right just yet.
+
+28
+00:01:11,02 --> 00:01:13,02
+To get 3D transforms to look right
+
+29
+00:01:13,02 --> 00:01:15,00
+or at least as we expect,
+
+30
+00:01:15,00 --> 00:01:17,04
+we need to add some perspective.
+
+31
+00:01:17,04 --> 00:01:18,09
+Going back to our CSS,
+
+32
+00:01:18,09 --> 00:01:21,06
+there are two places we can add perspective.
+
+33
+00:01:21,06 --> 00:01:24,02
+We could add it to the transform rule itself
+
+34
+00:01:24,02 --> 00:01:28,01
+or we can set the perspective property on a parent element.
+
+35
+00:01:28,01 --> 00:01:30,06
+I prefer to set this on the parent element.
+
+36
+00:01:30,06 --> 00:01:33,05
+That way if I decide to add any additional elements
+
+37
+00:01:33,05 --> 00:01:35,02
+for 3D transforms later,
+
+38
+00:01:35,02 --> 00:01:37,01
+they'll use the same perspective setting.
+
+39
+00:01:37,01 --> 00:01:38,07
+So I'll go up to my parent element
+
+40
+00:01:38,07 --> 00:01:42,03
+which in this case happens to be my body
+
+41
+00:01:42,03 --> 00:01:50,02
+and I will add a perspective of 1,000 pixels.
+
+42
+00:01:50,02 --> 00:01:53,03
+The perspective length can be set in pixels or ems
+
+43
+00:01:53,03 --> 00:01:55,04
+and it represents an approximation
+
+44
+00:01:55,04 --> 00:01:58,09
+of how far away you are from the transforming element.
+
+45
+00:01:58,09 --> 00:02:01,02
+Lower values show a more drastic effect
+
+46
+00:02:01,02 --> 00:02:03,08
+and higher values show a flatter effect.
+
+47
+00:02:03,08 --> 00:02:08,03
+So if we save and preview our 1,000-pixel perspective,
+
+48
+00:02:08,03 --> 00:02:10,01
+the rotation looks a little bit
+
+49
+00:02:10,01 --> 00:02:11,04
+more like you were expecting.
+
+50
+00:02:11,04 --> 00:02:16,00
+We get that kind of 45-degree lean back feel to it.
+
+51
+00:02:16,00 --> 00:02:18,08
+To contrast, take a look at what that same rotation
+
+52
+00:02:18,08 --> 00:02:21,06
+looks like with a 100-pixel perspective.
+
+53
+00:02:21,06 --> 00:02:27,05
+So if we go back and change our 1,000 pixels to 100 pixels,
+
+54
+00:02:27,05 --> 00:02:30,04
+the effect is much more dramatic.
+
+55
+00:02:30,04 --> 00:02:33,06
+Rotating around the y-axis will get you a similar result
+
+56
+00:02:33,06 --> 00:02:37,00
+as just rotating on the up and down or vertical axis,
+
+57
+00:02:37,00 --> 00:02:39,02
+and you can also rotate around both the x
+
+58
+00:02:39,02 --> 00:02:42,05
+and y-axis for a combined effect.
+
+59
+00:02:42,05 --> 00:02:45,00
+So we can add an additional rotation
+
+60
+00:02:45,00 --> 00:02:47,05
+on the y-axis of 20 degrees
+
+61
+00:02:47,05 --> 00:02:49,05
+and I will also go back and change that perspective
+
+62
+00:02:49,05 --> 00:02:51,03
+to 1,000 instead of 100
+
+63
+00:02:51,03 --> 00:02:53,08
+so we can be a little bit less drastic.
+
+64
+00:02:53,08 --> 00:02:55,08
+When I save and refresh that,
+
+65
+00:02:55,08 --> 00:02:58,05
+you can see we have rotation on both the x and y-axis
+
+66
+00:02:58,05 --> 00:03:00,02
+and we've transformed this robot
+
+67
+00:03:00,02 --> 00:03:03,03
+a little bit more within 3D space.
+
+68
+00:03:03,03 --> 00:03:05,06
+You can also move objects in 3D space
+
+69
+00:03:05,06 --> 00:03:07,09
+using the translate3d function.
+
+70
+00:03:07,09 --> 00:03:10,03
+The translate3d function takes three numbers,
+
+71
+00:03:10,03 --> 00:03:15,05
+one for each of the x, y, and z-axes.
+
+72
+00:03:15,05 --> 00:03:17,02
+So if we go back to our CSS,
+
+73
+00:03:17,02 --> 00:03:20,04
+we can add a translate3d
+
+74
+00:03:20,04 --> 00:03:25,04
+and we can move our robot say 100 pixels on the x-axis,
+
+75
+00:03:25,04 --> 00:03:27,09
+200 pixels down on the y-axis,
+
+76
+00:03:27,09 --> 00:03:31,08
+and minus 100 pixels on the z-axis.
+
+77
+00:03:31,08 --> 00:03:33,04
+So essentially what this will do
+
+78
+00:03:33,04 --> 00:03:36,05
+is move our robot slightly over to the right by 100 pixels,
+
+79
+00:03:36,05 --> 00:03:39,07
+slightly down by 200 pixels on the y-axis,
+
+80
+00:03:39,07 --> 00:03:41,04
+and slightly back in space
+
+81
+00:03:41,04 --> 00:03:44,01
+with that negative 100 pixels on the z-axis.
+
+82
+00:03:44,01 --> 00:03:47,02
+So if we save and preview our robot now,
+
+83
+00:03:47,02 --> 00:03:49,09
+it kind of looks like our image just got smaller.
+
+84
+00:03:49,09 --> 00:03:52,07
+It should, it's further away from us now,
+
+85
+00:03:52,07 --> 00:03:54,07
+but it's difficult to see that distance
+
+86
+00:03:54,07 --> 00:03:57,08
+when we just have one object on screen.
+
+87
+00:03:57,08 --> 00:04:00,07
+Translations like this are much more visually effective
+
+88
+00:04:00,07 --> 00:04:02,04
+when they're animated or transitioned
+
+89
+00:04:02,04 --> 00:04:06,06
+so we can see that movement backward into space.
+
+90
+00:04:06,06 --> 00:04:09,08
+So that's a dust a short look at what CSS transforms can do
+
+91
+00:04:09,08 --> 00:04:12,00
+to give us a look of 3D space.
+

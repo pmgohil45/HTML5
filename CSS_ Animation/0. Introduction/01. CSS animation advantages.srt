@@ -1,0 +1,112 @@
+1
+00:00:00,05 --> 00:00:02,01
+- Motion design is quickly becoming
+
+2
+00:00:02,01 --> 00:00:04,02
+a core skill for web designers.
+
+3
+00:00:04,02 --> 00:00:06,01
+Designers and developers are realizing
+
+4
+00:00:06,01 --> 00:00:09,00
+the power of web animation to engage, delight,
+
+5
+00:00:09,00 --> 00:00:11,05
+and communicate with their users.
+
+6
+00:00:11,05 --> 00:00:13,05
+I'm Val Head and I'll be leading you
+
+7
+00:00:13,05 --> 00:00:16,01
+through this course on CSS animation.
+
+8
+00:00:16,01 --> 00:00:18,08
+I've spent much of the last few years helping folks to learn
+
+9
+00:00:18,08 --> 00:00:21,02
+how to make web animation work for them
+
+10
+00:00:21,02 --> 00:00:24,05
+and to get their brand in motion in a meaningful way.
+
+11
+00:00:24,05 --> 00:00:27,03
+I'm the author of Designing Interface Animation
+
+12
+00:00:27,03 --> 00:00:29,01
+published by Rosenfeld Media,
+
+13
+00:00:29,01 --> 00:00:30,06
+and I'm excited to introduce you
+
+14
+00:00:30,06 --> 00:00:33,06
+to the world of CSS animation.
+
+15
+00:00:33,06 --> 00:00:36,00
+This course is for web designers and developers
+
+16
+00:00:36,00 --> 00:00:38,00
+who have some experience with CSS
+
+17
+00:00:38,00 --> 00:00:40,07
+and want to take their understanding of CSS animation
+
+18
+00:00:40,07 --> 00:00:42,02
+to the next level.
+
+19
+00:00:42,02 --> 00:00:43,09
+I'll show you how CSS can be used
+
+20
+00:00:43,09 --> 00:00:47,05
+to animate both HTML elements and SVG.
+
+21
+00:00:47,05 --> 00:00:49,07
+We'll also discuss how to get the best performance
+
+22
+00:00:49,07 --> 00:00:51,02
+out of your animation,
+
+23
+00:00:51,02 --> 00:00:53,02
+as well as tools that will help you build
+
+24
+00:00:53,02 --> 00:00:56,00
+and troubleshoot your animation work.
+
+25
+00:00:56,00 --> 00:00:57,01
+Over the past few years,
+
+26
+00:00:57,01 --> 00:00:59,05
+web animation has grown into a powerful option
+
+27
+00:00:59,05 --> 00:01:02,02
+for enhancing the user experience on the web.
+
+28
+00:01:02,02 --> 00:01:05,00
+CSS animation is the perfect place to get started.
+

@@ -1,0 +1,788 @@
+1
+00:00:00,05 --> 00:00:02,00
+- [Instructor] CSS custom properties,
+
+2
+00:00:02,00 --> 00:00:04,02
+otherwise known as CSS variables,
+
+3
+00:00:04,02 --> 00:00:05,09
+make it possible to create key frames
+
+4
+00:00:05,09 --> 00:00:08,03
+that are more dynamic and flexible.
+
+5
+00:00:08,03 --> 00:00:10,02
+In the earlier days of web animation,
+
+6
+00:00:10,02 --> 00:00:12,08
+one drawback of CSS key frame animation
+
+7
+00:00:12,08 --> 00:00:14,04
+was the fact that you couldn't change
+
+8
+00:00:14,04 --> 00:00:17,00
+or alter the key frames once they were written.
+
+9
+00:00:17,00 --> 00:00:20,03
+CSS variables change all of that.
+
+10
+00:00:20,03 --> 00:00:21,01
+In short,
+
+11
+00:00:21,01 --> 00:00:24,00
+CSS variables allow you to define and reuse
+
+12
+00:00:24,00 --> 00:00:27,03
+your own custom values within your CSS.
+
+13
+00:00:27,03 --> 00:00:28,06
+There are a number of things
+
+14
+00:00:28,06 --> 00:00:30,06
+that make CSS variables different than,
+
+15
+00:00:30,06 --> 00:00:33,06
+say, preprocessor variables that you might've used before.
+
+16
+00:00:33,06 --> 00:00:35,08
+But three things that really stand out
+
+17
+00:00:35,08 --> 00:00:38,05
+are the fact that they can be changed at runtime,
+
+18
+00:00:38,05 --> 00:00:40,08
+they follow the CSS cascade,
+
+19
+00:00:40,08 --> 00:00:44,05
+and they can be easily accessed by JavaScript.
+
+20
+00:00:44,05 --> 00:00:46,01
+When it comes to animation,
+
+21
+00:00:46,01 --> 00:00:47,07
+we can use CSS variables
+
+22
+00:00:47,07 --> 00:00:49,09
+both in our key frame definitions
+
+23
+00:00:49,09 --> 00:00:52,04
+and when we're assigning animation properties
+
+24
+00:00:52,04 --> 00:00:53,07
+to individual elements.
+
+25
+00:00:53,07 --> 00:00:57,02
+So there's a lot of potential for flexibility.
+
+26
+00:00:57,02 --> 00:00:59,02
+Let's take a look at all of this in action
+
+27
+00:00:59,02 --> 00:01:00,07
+and use one set of key frames
+
+28
+00:01:00,07 --> 00:01:05,00
+and create four words that animate in in different ways.
+
+29
+00:01:05,00 --> 00:01:06,02
+To start out our example,
+
+30
+00:01:06,02 --> 00:01:07,04
+I have a set of key frames
+
+31
+00:01:07,04 --> 00:01:10,00
+that transforms elements along the X axis
+
+32
+00:01:10,00 --> 00:01:12,00
+from somewhere far off to the left
+
+33
+00:01:12,00 --> 00:01:14,03
+with a scale of one and no rotation
+
+34
+00:01:14,03 --> 00:01:17,02
+to a place exactly where they would normally be
+
+35
+00:01:17,02 --> 00:01:21,06
+with a scale of 1.5 and a rotation of 10 degrees.
+
+36
+00:01:21,06 --> 00:01:24,04
+I've applied this animation to all of my paragraphs
+
+37
+00:01:24,04 --> 00:01:27,07
+with the same duration and the same easing.
+
+38
+00:01:27,07 --> 00:01:30,02
+That means when I go to preview our files so far,
+
+39
+00:01:30,02 --> 00:01:31,05
+we'll see this,
+
+40
+00:01:31,05 --> 00:01:33,04
+all four of my paragraphs animate in
+
+41
+00:01:33,04 --> 00:01:35,00
+with the exact same animation
+
+42
+00:01:35,00 --> 00:01:38,02
+and start and end in the exact same place.
+
+43
+00:01:38,02 --> 00:01:41,02
+Now if I wanted all four of these words to animate in
+
+44
+00:01:41,02 --> 00:01:42,05
+in slightly different ways,
+
+45
+00:01:42,05 --> 00:01:44,07
+I could write four different animations,
+
+46
+00:01:44,07 --> 00:01:46,00
+one for each word,
+
+47
+00:01:46,00 --> 00:01:48,05
+or I could use CSS variables
+
+48
+00:01:48,05 --> 00:01:50,03
+to make my key frames more dynamic
+
+49
+00:01:50,03 --> 00:01:54,04
+and adjust the animation slightly for each different word.
+
+50
+00:01:54,04 --> 00:01:58,03
+And that's the route I'm going to take for this example.
+
+51
+00:01:58,03 --> 00:02:00,00
+So I'll head back to my CSS
+
+52
+00:02:00,00 --> 00:02:03,07
+and start adding some CSS variables to use.
+
+53
+00:02:03,07 --> 00:02:06,01
+I'm going to start by declaring some CSS variables
+
+54
+00:02:06,01 --> 00:02:08,00
+at the root of my document.
+
+55
+00:02:08,00 --> 00:02:12,06
+And since my animation is moving things a certain distance
+
+56
+00:02:12,06 --> 00:02:14,07
+scaling to a certain scale amount
+
+57
+00:02:14,07 --> 00:02:17,02
+and rotating to a certain number of degrees,
+
+58
+00:02:17,02 --> 00:02:21,01
+those are the three things I'll make variables for first.
+
+59
+00:02:21,01 --> 00:02:24,06
+So I'll make a CSS variable of distance or dist rather,
+
+60
+00:02:24,06 --> 00:02:31,02
+and I will set its default at 0%.
+
+61
+00:02:31,02 --> 00:02:34,01
+I'll create a CSS variable of scale,
+
+62
+00:02:34,01 --> 00:02:37,05
+and I'll set its default at two.
+
+63
+00:02:37,05 --> 00:02:39,07
+I'll create a CSS variable degrees
+
+64
+00:02:39,07 --> 00:02:42,03
+or deg, I guess, is how you might say that,
+
+65
+00:02:42,03 --> 00:02:46,07
+and I will set that default to 10 degrees.
+
+66
+00:02:46,07 --> 00:02:47,08
+With those all set,
+
+67
+00:02:47,08 --> 00:02:50,05
+I'll go and reference them in my key frames.
+
+68
+00:02:50,05 --> 00:02:52,07
+So at my 100% key frame,
+
+69
+00:02:52,07 --> 00:02:55,01
+instead of translating to 0%,
+
+70
+00:02:55,01 --> 00:02:59,06
+I'll translate to the variable of distance or dist,
+
+71
+00:02:59,06 --> 00:03:02,01
+as I wrote above,
+
+72
+00:03:02,01 --> 00:03:06,01
+And instead of scaling to the hard-coded number of 1.5,
+
+73
+00:03:06,01 --> 00:03:09,09
+I'll scale to my variable of scale.
+
+74
+00:03:09,09 --> 00:03:14,01
+And the same for rotation.
+
+75
+00:03:14,01 --> 00:03:15,09
+And now that I have those variable set
+
+76
+00:03:15,09 --> 00:03:17,08
+for my 100% key frame,
+
+77
+00:03:17,08 --> 00:03:19,05
+I can adjust those variables
+
+78
+00:03:19,05 --> 00:03:24,02
+for each individual paragraph thanks to the CSS cascade.
+
+79
+00:03:24,02 --> 00:03:25,08
+I'll start with my first paragraph
+
+80
+00:03:25,08 --> 00:03:28,08
+and adjust some or all of these variable values
+
+81
+00:03:28,08 --> 00:03:30,01
+for each of my paragraphs
+
+82
+00:03:30,01 --> 00:03:33,03
+so that the visual results of the 100% key frame
+
+83
+00:03:33,03 --> 00:03:36,09
+will be slightly different for each.
+
+84
+00:03:36,09 --> 00:03:38,06
+So starting with my first paragraph,
+
+85
+00:03:38,06 --> 00:03:43,05
+I'll give it the scale variable value of 1.75.
+
+86
+00:03:43,05 --> 00:03:48,04
+I'll give it the dist variable value of 80%
+
+87
+00:03:48,04 --> 00:03:53,02
+and the degree of variable value of five degrees.
+
+88
+00:03:53,02 --> 00:03:55,01
+So changing all of the values,
+
+89
+00:03:55,01 --> 00:03:56,00
+at least slightly,
+
+90
+00:03:56,00 --> 00:03:58,08
+for our first paragraph.
+
+91
+00:03:58,08 --> 00:04:00,01
+For our second paragraph,
+
+92
+00:04:00,01 --> 00:04:02,02
+I'm not going to change all of the values for this one.
+
+93
+00:04:02,02 --> 00:04:04,04
+I'll let one of them use the default value
+
+94
+00:04:04,04 --> 00:04:05,07
+set up at the root.
+
+95
+00:04:05,07 --> 00:04:11,05
+So I will give it the scale variable value of 1.5.
+
+96
+00:04:11,05 --> 00:04:17,01
+And I will give it the dist variable value of 30%.
+
+97
+00:04:17,01 --> 00:04:21,01
+I haven't given my second paragraph a degree variable value.
+
+98
+00:04:21,01 --> 00:04:23,02
+So that means it will default to use the one
+
+99
+00:04:23,02 --> 00:04:24,07
+that set up here in my root,
+
+100
+00:04:24,07 --> 00:04:29,07
+which will be the degree rotation of 10 degrees.
+
+101
+00:04:29,07 --> 00:04:30,08
+I'm sure you're starting to see
+
+102
+00:04:30,08 --> 00:04:33,09
+the power of CSS variables here.
+
+103
+00:04:33,09 --> 00:04:35,02
+For my third paragraph,
+
+104
+00:04:35,02 --> 00:04:36,09
+I'm going to let it use
+
+105
+00:04:36,09 --> 00:04:39,02
+the root value of the scale variable,
+
+106
+00:04:39,02 --> 00:04:42,03
+but I'll give it a degree variable of minus five degrees,
+
+107
+00:04:42,03 --> 00:04:43,09
+so the rotation will be slightly different
+
+108
+00:04:43,09 --> 00:04:45,05
+than the ones above.
+
+109
+00:04:45,05 --> 00:04:51,01
+And then I'll give it the distance variable of 100%.
+
+110
+00:04:51,01 --> 00:04:52,02
+Last but not least,
+
+111
+00:04:52,02 --> 00:04:54,00
+I will give my fourth paragraph
+
+112
+00:04:54,00 --> 00:05:00,03
+the scale variable value of 1.9,
+
+113
+00:05:00,03 --> 00:05:05,02
+the deg or degree variable value of 15 degrees.
+
+114
+00:05:05,02 --> 00:05:07,00
+And I think I'll leave it at that.
+
+115
+00:05:07,00 --> 00:05:08,09
+So if I save our file now
+
+116
+00:05:08,09 --> 00:05:13,03
+and preview what we've got,
+
+117
+00:05:13,03 --> 00:05:15,08
+all four words are still animating in
+
+118
+00:05:15,08 --> 00:05:18,02
+with the same duration, the same easing,
+
+119
+00:05:18,02 --> 00:05:19,09
+but their ending point is visually different,
+
+120
+00:05:19,09 --> 00:05:22,04
+because we've used those CSS variables
+
+121
+00:05:22,04 --> 00:05:25,00
+to change the 100% key frame values
+
+122
+00:05:25,00 --> 00:05:28,06
+for each of those paragraphs.
+
+123
+00:05:28,06 --> 00:05:30,02
+That's already pretty great,
+
+124
+00:05:30,02 --> 00:05:32,09
+but we can make our animations even more dynamic
+
+125
+00:05:32,09 --> 00:05:35,07
+if we use variables in our animation assignment
+
+126
+00:05:35,07 --> 00:05:37,06
+as well as in the key frames.
+
+127
+00:05:37,06 --> 00:05:42,01
+So let's go back to our CSS and do a little of that.
+
+128
+00:05:42,01 --> 00:05:44,05
+I'm going to go back to where I define my variables
+
+129
+00:05:44,05 --> 00:05:46,09
+at the root.
+
+130
+00:05:46,09 --> 00:05:49,01
+And I'm going to add three variables
+
+131
+00:05:49,01 --> 00:05:53,03
+we can use for our animation assignment.
+
+132
+00:05:53,03 --> 00:05:56,02
+Specifically, that will be a dur or duration variable.
+
+133
+00:05:56,02 --> 00:05:58,00
+And I'll set that by default at two seconds,
+
+134
+00:05:58,00 --> 00:05:59,06
+since that's already what we have
+
+135
+00:05:59,06 --> 00:06:04,06
+in our animation assignment.
+
+136
+00:06:04,06 --> 00:06:06,07
+I'll create a delay variable,
+
+137
+00:06:06,07 --> 00:06:11,09
+and I will set that default value to zero seconds.
+
+138
+00:06:11,09 --> 00:06:13,08
+And I'll create an ease variable
+
+139
+00:06:13,08 --> 00:06:17,04
+and give it the default value of linear.
+
+140
+00:06:17,04 --> 00:06:20,04
+Next, I'll use those variables in our animation assignment
+
+141
+00:06:20,04 --> 00:06:22,07
+that we've assigned to all of our paragraphs.
+
+142
+00:06:22,07 --> 00:06:23,06
+So for example,
+
+143
+00:06:23,06 --> 00:06:26,04
+here I have the duration of two seconds in the shorthand,
+
+144
+00:06:26,04 --> 00:06:27,08
+and I can replace that
+
+145
+00:06:27,08 --> 00:06:32,00
+with the variable of dur or duration.
+
+146
+00:06:32,00 --> 00:06:33,08
+I don't have a delay set on this currently,
+
+147
+00:06:33,08 --> 00:06:37,02
+but I could add a variable for delay here.
+
+148
+00:06:37,02 --> 00:06:40,02
+The second number with time in the animation shorthand
+
+149
+00:06:40,02 --> 00:06:41,05
+will be the delay,
+
+150
+00:06:41,05 --> 00:06:45,04
+and that counts the same when we're using variables as well.
+
+151
+00:06:45,04 --> 00:06:46,04
+And last but not least,
+
+152
+00:06:46,04 --> 00:06:52,05
+I will replace our linear easing with our easing variable.
+
+153
+00:06:52,05 --> 00:06:54,08
+So that means that the variable values
+
+154
+00:06:54,08 --> 00:06:57,07
+will be used in place of the hard-coded numbers and easing
+
+155
+00:06:57,07 --> 00:06:59,09
+I had here before.
+
+156
+00:06:59,09 --> 00:07:02,08
+Just like we did with our 100% key frame variables,
+
+157
+00:07:02,08 --> 00:07:05,01
+we can adjust the value of these variables
+
+158
+00:07:05,01 --> 00:07:07,03
+for each of our individual paragraphs,
+
+159
+00:07:07,03 --> 00:07:09,07
+and that will give us even more of a dynamic look
+
+160
+00:07:09,07 --> 00:07:13,03
+to our animations.
+
+161
+00:07:13,03 --> 00:07:16,01
+So for paragraph one,
+
+162
+00:07:16,01 --> 00:07:18,03
+I'm going to give it a different duration of,
+
+163
+00:07:18,03 --> 00:07:20,05
+say, 1.9 seconds.
+
+164
+00:07:20,05 --> 00:07:23,01
+It'll be a little bit faster than the rest.
+
+165
+00:07:23,01 --> 00:07:26,02
+And I will give it a custom easing with the ease variable,
+
+166
+00:07:26,02 --> 00:07:37,07
+and that will be a cubic Bezier.
+
+167
+00:07:37,07 --> 00:07:38,09
+For paragraph two,
+
+168
+00:07:38,09 --> 00:07:43,02
+I'll give it a delay variable value of maybe 0.5 seconds,
+
+169
+00:07:43,02 --> 00:07:45,02
+just a little bit of a delay.
+
+170
+00:07:45,02 --> 00:07:48,03
+And I'm going to give it an easing variable value
+
+171
+00:07:48,03 --> 00:07:55,05
+of its own cubic Bezier as well.
+
+172
+00:07:55,05 --> 00:07:56,09
+For paragraph three,
+
+173
+00:07:56,09 --> 00:07:58,09
+let's just give it a different easing value.
+
+174
+00:07:58,09 --> 00:08:00,07
+So we'll use the ease variable
+
+175
+00:08:00,07 --> 00:08:06,04
+and give it a cubic Bezier value as well.
+
+176
+00:08:06,04 --> 00:08:12,07
+And I'll do the same for our fourth paragraph as well.
+
+177
+00:08:12,07 --> 00:08:14,05
+With those additions in place,
+
+178
+00:08:14,05 --> 00:08:21,08
+we can save and preview our file once again.
+
+179
+00:08:21,08 --> 00:08:22,07
+And as you can see,
+
+180
+00:08:22,07 --> 00:08:24,00
+with those additional variables,
+
+181
+00:08:24,00 --> 00:08:25,08
+we've made the animation even more different
+
+182
+00:08:25,08 --> 00:08:27,05
+for each individual word.
+
+183
+00:08:27,05 --> 00:08:29,09
+They're all still using the same set of key frames
+
+184
+00:08:29,09 --> 00:08:31,08
+and the same animation assignment.
+
+185
+00:08:31,08 --> 00:08:33,06
+But thanks to our CSS variables,
+
+186
+00:08:33,06 --> 00:08:36,07
+they've all got a slightly different look.
+
+187
+00:08:36,07 --> 00:08:37,08
+And this is just the start
+
+188
+00:08:37,08 --> 00:08:40,01
+of how we can make our CSS animations
+
+189
+00:08:40,01 --> 00:08:42,05
+even more dynamic with CSS variables.
+
+190
+00:08:42,05 --> 00:08:45,02
+We could take this even further by using JavaScript
+
+191
+00:08:45,02 --> 00:08:47,08
+to change the values of these variables at runtime,
+
+192
+00:08:47,08 --> 00:08:49,00
+and even more.
+
+193
+00:08:49,00 --> 00:08:51,04
+So CSS variables are really wonderful
+
+194
+00:08:51,04 --> 00:08:54,07
+when they're paired with CSS animation.
+
+195
+00:08:54,07 --> 00:08:56,06
+If you found this example interesting,
+
+196
+00:08:56,06 --> 00:08:59,06
+I highly recommend learning more about CSS variables
+
+197
+00:08:59,06 --> 00:09:02,00
+and the powerful things they can do.
+

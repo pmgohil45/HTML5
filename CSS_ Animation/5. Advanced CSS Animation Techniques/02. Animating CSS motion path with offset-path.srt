@@ -1,0 +1,308 @@
+1
+00:00:00,05 --> 00:00:01,08
+- [Narrator] Now that we have our offset path
+
+2
+00:00:01,08 --> 00:00:04,06
+assigned to our element, it's time to animate it.
+
+3
+00:00:04,06 --> 00:00:08,04
+Just to recap, our robot is an image in our HTML
+
+4
+00:00:08,04 --> 00:00:11,04
+and in our CSS we've assigned an offset path
+
+5
+00:00:11,04 --> 00:00:13,03
+to our robot image.
+
+6
+00:00:13,03 --> 00:00:14,08
+There are a few different properties
+
+7
+00:00:14,08 --> 00:00:17,02
+that work along with the offset path property,
+
+8
+00:00:17,02 --> 00:00:19,07
+but the two that are most useful for animation
+
+9
+00:00:19,07 --> 00:00:23,04
+are the offset distance and the offset rotation.
+
+10
+00:00:23,04 --> 00:00:26,05
+Offset distance represents how far along the offset path
+
+11
+00:00:26,05 --> 00:00:28,03
+the element in question is,
+
+12
+00:00:28,03 --> 00:00:30,08
+you can use this to place a number of elements
+
+13
+00:00:30,08 --> 00:00:34,01
+spaced out along a particular path, or in our case,
+
+14
+00:00:34,01 --> 00:00:36,08
+we'll use it to move an element along a path
+
+15
+00:00:36,08 --> 00:00:39,09
+by animating it's offset distance value.
+
+16
+00:00:39,09 --> 00:00:42,04
+I'll start by writing a set of key frames to animate
+
+17
+00:00:42,04 --> 00:00:44,07
+that offset distance value.
+
+18
+00:00:44,07 --> 00:00:47,04
+I'm going to call this set of key frames fly
+
+19
+00:00:47,04 --> 00:00:50,08
+because that's kind of what the robot will be doing,
+
+20
+00:00:50,08 --> 00:00:55,06
+and I'll start at the 0% key frame with an offset distance
+
+21
+00:00:55,06 --> 00:00:56,09
+of 0%.
+
+22
+00:00:56,09 --> 00:01:00,04
+So that is 0% of the way along the path,
+
+23
+00:01:00,04 --> 00:01:03,09
+effectively the start of the path.
+
+24
+00:01:03,09 --> 00:01:07,05
+And I'll create a 100% key frame with an offset distance
+
+25
+00:01:07,05 --> 00:01:12,02
+of 100%, which is all the way across to the end of the path.
+
+26
+00:01:12,02 --> 00:01:15,01
+This will make whichever element we apply this to
+
+27
+00:01:15,01 --> 00:01:17,02
+animate from the very start of the path
+
+28
+00:01:17,02 --> 00:01:19,09
+to the very end of the path.
+
+29
+00:01:19,09 --> 00:01:22,03
+I should note that the key frame percentages
+
+30
+00:01:22,03 --> 00:01:24,03
+and the offset distance percentages
+
+31
+00:01:24,03 --> 00:01:26,00
+don't have to match exactly.
+
+32
+00:01:26,00 --> 00:01:29,04
+It's just how it worked out for this particular example.
+
+33
+00:01:29,04 --> 00:01:31,00
+With those key frames in place,
+
+34
+00:01:31,00 --> 00:01:35,02
+we can assign those key frames to our robot image.
+
+35
+00:01:35,02 --> 00:01:38,05
+So I'll give our robot image the animation of fly.
+
+36
+00:01:38,05 --> 00:01:40,08
+I'm going to give it a duration of nine seconds
+
+37
+00:01:40,08 --> 00:01:43,04
+because it's got a lot of ground to cover.
+
+38
+00:01:43,04 --> 00:01:46,05
+I'm going to use a custom cubic bezier for the easing
+
+39
+00:01:46,05 --> 00:01:49,01
+and I'll give it an animation film mode of both,
+
+40
+00:01:49,01 --> 00:01:51,02
+that way it will stay at the end of the path
+
+41
+00:01:51,02 --> 00:01:55,08
+once it's animated to that offset distance of 100%.
+
+42
+00:01:55,08 --> 00:01:59,06
+If we save this in preview it now,
+
+43
+00:01:59,06 --> 00:02:03,00
+our robot animates along the path we set as the offset path
+
+44
+00:02:03,00 --> 00:02:04,07
+and that's pretty cool.
+
+45
+00:02:04,07 --> 00:02:07,02
+You'll notice that our robot image is rotating
+
+46
+00:02:07,02 --> 00:02:08,07
+as it goes along the path,
+
+47
+00:02:08,07 --> 00:02:11,02
+and that's because the offset rotate property
+
+48
+00:02:11,02 --> 00:02:13,01
+is set to auto by default.
+
+49
+00:02:13,01 --> 00:02:16,00
+So we didn't set an offset rotate property,
+
+50
+00:02:16,00 --> 00:02:18,08
+but right now it's as if we wrote this
+
+51
+00:02:18,08 --> 00:02:21,04
+and that will make the element that's following the path
+
+52
+00:02:21,04 --> 00:02:25,07
+auto rotate to keep itself oriented to the path.
+
+53
+00:02:25,07 --> 00:02:28,06
+If we wanted to, we can add an angle in addition
+
+54
+00:02:28,06 --> 00:02:29,06
+to this auto.
+
+55
+00:02:29,06 --> 00:02:32,09
+So I could add, let's say an additional 45 degrees,
+
+56
+00:02:32,09 --> 00:02:35,05
+which essentially says follow the path
+
+57
+00:02:35,05 --> 00:02:38,04
+with the offset rotate of auto, but lean forward
+
+58
+00:02:38,04 --> 00:02:41,05
+just by 45 degrees in addition to that.
+
+59
+00:02:41,05 --> 00:02:44,01
+So if we save that in preview our robot again,
+
+60
+00:02:44,01 --> 00:02:46,09
+now we have the robot following along the path
+
+61
+00:02:46,09 --> 00:02:48,09
+but leaning just a little bit forward
+
+62
+00:02:48,09 --> 00:02:51,00
+and maybe that's a kind of fun effect,
+
+63
+00:02:51,00 --> 00:02:52,07
+I don't know, I think personally I prefer
+
+64
+00:02:52,07 --> 00:02:55,01
+just the straight up auto value,
+
+65
+00:02:55,01 --> 00:02:57,00
+but I wanted to show you that there were some options
+
+66
+00:02:57,00 --> 00:02:58,02
+there as well.
+
+67
+00:02:58,02 --> 00:03:01,04
+So I'll go back to auto and preview our robot once more,
+
+68
+00:03:01,04 --> 00:03:07,01
+and our robot animates along the path in that loop shape.
+
+69
+00:03:07,01 --> 00:03:10,05
+As I mentioned, offset path is still a fairly new property
+
+70
+00:03:10,05 --> 00:03:12,09
+and it will most definitely be evolving.
+
+71
+00:03:12,09 --> 00:03:15,01
+It can also be a bit tricky when you have to use
+
+72
+00:03:15,01 --> 00:03:17,02
+the SVG path syntax.
+
+73
+00:03:17,02 --> 00:03:19,06
+Animating with offset path is definitely something
+
+74
+00:03:19,06 --> 00:03:22,05
+worth knowing about and trying out for yourself,
+
+75
+00:03:22,05 --> 00:03:23,08
+but at the time of recording,
+
+76
+00:03:23,08 --> 00:03:26,08
+it's not something I'd recommend using in production,
+
+77
+00:03:26,08 --> 00:03:30,00
+at least not until it's more widely supported by browsers.
+

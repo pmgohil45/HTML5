@@ -1,0 +1,460 @@
+1
+00:00:00,05 --> 00:00:02,06
+- [Tutor] We have one last timing function to look at,
+
+2
+00:00:02,06 --> 00:00:04,07
+and that's the steps function.
+
+3
+00:00:04,07 --> 00:00:06,09
+Steps work a little differently than our other options
+
+4
+00:00:06,09 --> 00:00:08,07
+for animation timing functions.
+
+5
+00:00:08,07 --> 00:00:11,02
+And they can seem a little confusing at first,
+
+6
+00:00:11,02 --> 00:00:13,01
+but here's how I like to picture it.
+
+7
+00:00:13,01 --> 00:00:15,09
+The steps function essentially splits the total duration
+
+8
+00:00:15,09 --> 00:00:18,08
+of your animation into equal blocks of time.
+
+9
+00:00:18,08 --> 00:00:21,00
+Each one of those blocks is a step.
+
+10
+00:00:21,00 --> 00:00:23,08
+Each of those tiny blocks also take up some amount of time,
+
+11
+00:00:23,08 --> 00:00:26,05
+even if it's just a fraction of a second.
+
+12
+00:00:26,05 --> 00:00:28,04
+So instead of continuous motion,
+
+13
+00:00:28,04 --> 00:00:31,08
+your animation is divided up into a series of holds
+
+14
+00:00:31,08 --> 00:00:34,05
+something like this.
+
+15
+00:00:34,05 --> 00:00:37,02
+And you can use the jumpstart and jump and keywords
+
+16
+00:00:37,02 --> 00:00:41,01
+for finer control over how the whole effect behaves.
+
+17
+00:00:41,01 --> 00:00:43,07
+Let's create a typing on effect animation
+
+18
+00:00:43,07 --> 00:00:46,07
+to get a feel for how steps works.
+
+19
+00:00:46,07 --> 00:00:49,01
+The basis of this effect is to animate the width
+
+20
+00:00:49,01 --> 00:00:51,03
+of our H1 to reveal the letters one at a time
+
+21
+00:00:51,03 --> 00:00:53,01
+as if they're typing on.
+
+22
+00:00:53,01 --> 00:00:54,08
+And that one at a time part,
+
+23
+00:00:54,08 --> 00:00:57,06
+is what steps will make possible.
+
+24
+00:00:57,06 --> 00:00:59,03
+So I already have things partly started
+
+25
+00:00:59,03 --> 00:01:00,06
+and I've written some key frames
+
+26
+00:01:00,06 --> 00:01:03,01
+that we'll use to animate the cursor blinking.
+
+27
+00:01:03,01 --> 00:01:06,00
+But we still need some key frames to make the type on effect
+
+28
+00:01:06,00 --> 00:01:09,07
+and essentially reveal the h1, one letter at a time.
+
+29
+00:01:09,07 --> 00:01:12,03
+So I'll start my @keyframes block,
+
+30
+00:01:12,03 --> 00:01:16,00
+and I'm going to call this animation typing.
+
+31
+00:01:16,00 --> 00:01:17,03
+And we'll set up these key frames,
+
+32
+00:01:17,03 --> 00:01:20,03
+very similar to how we've done in previous examples.
+
+33
+00:01:20,03 --> 00:01:22,04
+We want to start our h1 with a width of zero.
+
+34
+00:01:22,04 --> 00:01:28,03
+So our 0% key frame, we'll set the width of zero pixels,
+
+35
+00:01:28,03 --> 00:01:30,07
+and then we want it to end at its full size.
+
+36
+00:01:30,07 --> 00:01:33,06
+So start being basically invisible 'cause it's so thin
+
+37
+00:01:33,06 --> 00:01:36,03
+and end being wide enough to see all the letters.
+
+38
+00:01:36,03 --> 00:01:38,04
+So that's our 100% key frame
+
+39
+00:01:38,04 --> 00:01:43,08
+and we'll set the width there at 100%.
+
+40
+00:01:43,08 --> 00:01:44,09
+With those key frames in place.
+
+41
+00:01:44,09 --> 00:01:47,07
+We'll assign this animation to our h1.
+
+42
+00:01:47,07 --> 00:01:50,03
+So we'll give it the animation name of typing,
+
+43
+00:01:50,03 --> 00:01:53,00
+like we just had below.
+
+44
+00:01:53,00 --> 00:01:59,03
+And we'll give it an animation duration of three seconds
+
+45
+00:01:59,03 --> 00:02:00,02
+and we'll additionally,
+
+46
+00:02:00,02 --> 00:02:05,04
+give it the animation timing function of steps.
+
+47
+00:02:05,04 --> 00:02:07,06
+Now we have to give it a number of steps to take.
+
+48
+00:02:07,06 --> 00:02:09,09
+And in this case we have 14 letters.
+
+49
+00:02:09,09 --> 00:02:14,01
+So I'm going to use 14 steps, one for each letter.
+
+50
+00:02:14,01 --> 00:02:18,01
+So if I save that and preview our file,
+
+51
+00:02:18,01 --> 00:02:20,02
+we start to see our typing on effect.
+
+52
+00:02:20,02 --> 00:02:23,04
+The letters are appearing one at a time as the h1 expands
+
+53
+00:02:23,04 --> 00:02:26,00
+and that's thanks to the steps function.
+
+54
+00:02:26,00 --> 00:02:27,05
+There's one more thing we want to add
+
+55
+00:02:27,05 --> 00:02:28,06
+to get this full effect.
+
+56
+00:02:28,06 --> 00:02:30,02
+And that's the blinking cursor.
+
+57
+00:02:30,02 --> 00:02:31,08
+Right now, it's just kind of hanging out.
+
+58
+00:02:31,08 --> 00:02:33,06
+So let's give it an animation as well.
+
+59
+00:02:33,06 --> 00:02:36,09
+And we'll also use steps to get that blinking effect.
+
+60
+00:02:36,09 --> 00:02:39,05
+So we'll go back to our CSS.
+
+61
+00:02:39,05 --> 00:02:41,00
+And what we're going to do,
+
+62
+00:02:41,00 --> 00:02:42,06
+is apply both the blinking key frames
+
+63
+00:02:42,06 --> 00:02:45,02
+and the typing key frames to our h1.
+
+64
+00:02:45,02 --> 00:02:47,07
+The typing will adjust the width to show the letters
+
+65
+00:02:47,07 --> 00:02:49,09
+and the blinking will adjust the border color
+
+66
+00:02:49,09 --> 00:02:52,07
+on the far right side to create our cursor.
+
+67
+00:02:52,07 --> 00:02:55,00
+When we're applying more than one animation to an element,
+
+68
+00:02:55,00 --> 00:02:55,09
+it becomes a lot easier
+
+69
+00:02:55,09 --> 00:02:58,09
+if we start using the animation shorthand.
+
+70
+00:02:58,09 --> 00:03:01,01
+So I'm going to take what we've got right here
+
+71
+00:03:01,01 --> 00:03:03,01
+and replace it with the shorthand version,
+
+72
+00:03:03,01 --> 00:03:06,04
+to make it easier to add the second animation as well.
+
+73
+00:03:06,04 --> 00:03:07,05
+So, for our shorthand version,
+
+74
+00:03:07,05 --> 00:03:09,09
+we're going to use the animation property,
+
+75
+00:03:09,09 --> 00:03:12,07
+and we're going to give it the animation name of typing.
+
+76
+00:03:12,07 --> 00:03:14,09
+We'll give it a duration of three seconds.
+
+77
+00:03:14,09 --> 00:03:15,08
+The first number
+
+78
+00:03:15,08 --> 00:03:18,00
+with time associated with it in the shorthand
+
+79
+00:03:18,00 --> 00:03:19,05
+will be used as the duration.
+
+80
+00:03:19,05 --> 00:03:20,07
+And we know we want three seconds.
+
+81
+00:03:20,07 --> 00:03:22,02
+That's what we used before.
+
+82
+00:03:22,02 --> 00:03:25,05
+And I'll give it the animation timing function of steps.
+
+83
+00:03:25,05 --> 00:03:29,01
+And we use 14 there before, so we'll use 14 there again.
+
+84
+00:03:29,01 --> 00:03:31,04
+So this is the shorthand version of what we had written
+
+85
+00:03:31,04 --> 00:03:33,05
+a few seconds ago.
+
+86
+00:03:33,05 --> 00:03:36,05
+Now I'll a comma here to separate our two animations.
+
+87
+00:03:36,05 --> 00:03:37,06
+And I like to move to a new line
+
+88
+00:03:37,06 --> 00:03:39,08
+because it just makes it easier to read,
+
+89
+00:03:39,08 --> 00:03:42,08
+but that is completely optional.
+
+90
+00:03:42,08 --> 00:03:45,02
+So I'll add a second animation of blinking.
+
+91
+00:03:45,02 --> 00:03:46,05
+That's going to be for the cursor,
+
+92
+00:03:46,05 --> 00:03:48,07
+which is a border on our h1.
+
+93
+00:03:48,07 --> 00:03:51,07
+We're going to give it a duration of 0.5 seconds
+
+94
+00:03:51,07 --> 00:03:54,05
+because the blinking is going to happen rather quickly.
+
+95
+00:03:54,05 --> 00:03:56,05
+And we'll give it the animation timing function
+
+96
+00:03:56,05 --> 00:03:58,03
+also of steps.
+
+97
+00:03:58,03 --> 00:04:01,00
+And we're going to give this one, a step of one.
+
+98
+00:04:01,00 --> 00:04:04,05
+And we'll also tell it to repeat infinitely.
+
+99
+00:04:04,05 --> 00:04:07,03
+So that's essentially the animation iteration count
+
+100
+00:04:07,03 --> 00:04:08,04
+of infinite.
+
+101
+00:04:08,04 --> 00:04:10,03
+Because to look like a real cursor,
+
+102
+00:04:10,03 --> 00:04:13,05
+we want to have it blinking even after we stop typing.
+
+103
+00:04:13,05 --> 00:04:16,08
+So if we save this and preview it now,
+
+104
+00:04:16,08 --> 00:04:18,08
+we have our letters showing up one at a time
+
+105
+00:04:18,08 --> 00:04:22,00
+typing on thanks to our typing key frames animation.
+
+106
+00:04:22,00 --> 00:04:23,02
+And we have the cursor blinking
+
+107
+00:04:23,02 --> 00:04:26,00
+thanks to our blinking animation.
+
+108
+00:04:26,00 --> 00:04:30,04
+Both of which are powered by the steps timing function.
+
+109
+00:04:30,04 --> 00:04:31,03
+So that's our quick look
+
+110
+00:04:31,03 --> 00:04:33,01
+at the steps function for CSS animation
+
+111
+00:04:33,01 --> 00:04:36,04
+and the sort of look it can give your animations.
+
+112
+00:04:36,04 --> 00:04:38,03
+Steps don't tend to get used as often
+
+113
+00:04:38,03 --> 00:04:40,00
+as other timing functions,
+
+114
+00:04:40,00 --> 00:04:42,00
+but it's still good to know about for those times
+
+115
+00:04:42,00 --> 00:04:44,00
+when it's the right solution for what you need.
+

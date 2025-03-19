@@ -1,0 +1,512 @@
+1
+00:00:00,05 --> 00:00:02,07
+- [Instructor] Let's take what we know about CSS animation
+
+2
+00:00:02,07 --> 00:00:05,03
+and apply it to SVG elements too.
+
+3
+00:00:05,03 --> 00:00:07,01
+We'll create this heart filling animation
+
+4
+00:00:07,01 --> 00:00:10,03
+with this SVG heart to create an effect that you might see
+
+5
+00:00:10,03 --> 00:00:15,02
+when liking a post or photo or something like that.
+
+6
+00:00:15,02 --> 00:00:19,01
+My SVG code is inline here in my HTML.
+
+7
+00:00:19,01 --> 00:00:20,07
+This is our SVG.
+
+8
+00:00:20,07 --> 00:00:23,07
+And inside our SVG, we have two main shapes.
+
+9
+00:00:23,07 --> 00:00:25,03
+We have our heart outline
+
+10
+00:00:25,03 --> 00:00:27,04
+that I've given the idea of outline,
+
+11
+00:00:27,04 --> 00:00:29,00
+and we have our heart fill
+
+12
+00:00:29,00 --> 00:00:31,09
+that I've given the idea of heart fill.
+
+13
+00:00:31,09 --> 00:00:35,00
+We're working with a simplified SVG for this example,
+
+14
+00:00:35,00 --> 00:00:37,01
+an SVG with just two shapes,
+
+15
+00:00:37,01 --> 00:00:40,07
+but CSS animations can be applied to SVGs with more shapes
+
+16
+00:00:40,07 --> 00:00:42,03
+and more complexities as well.
+
+17
+00:00:42,03 --> 00:00:45,09
+We're just keeping it focused for this example.
+
+18
+00:00:45,09 --> 00:00:47,04
+Over in my CSS,
+
+19
+00:00:47,04 --> 00:00:49,05
+I have the two sets of key frames we'll be using
+
+20
+00:00:49,05 --> 00:00:52,00
+to create this animation.
+
+21
+00:00:52,00 --> 00:00:54,06
+The first is a set of key frames I've called beat,
+
+22
+00:00:54,06 --> 00:00:57,08
+and we'll use this on the fill shape of the heart.
+
+23
+00:00:57,08 --> 00:01:00,04
+It will take the fill shape starting very, very small,
+
+24
+00:01:00,04 --> 00:01:03,08
+a scale of 0.1, and then at 80% of the animation,
+
+25
+00:01:03,08 --> 00:01:07,00
+it will scale the fill shape up to be bigger than normal,
+
+26
+00:01:07,00 --> 00:01:09,02
+a scale of 1.25.
+
+27
+00:01:09,02 --> 00:01:10,08
+And at the end of the animation,
+
+28
+00:01:10,08 --> 00:01:13,04
+the heart fill will go back to its intrinsic size
+
+29
+00:01:13,04 --> 00:01:17,04
+with a scale of one.
+
+30
+00:01:17,04 --> 00:01:19,07
+I also have a set of key frames named fade,
+
+31
+00:01:19,07 --> 00:01:21,08
+which I'll be using on both the outline
+
+32
+00:01:21,08 --> 00:01:23,04
+and heart filled shape.
+
+33
+00:01:23,04 --> 00:01:26,02
+These key frames take whatever element I apply it to
+
+34
+00:01:26,02 --> 00:01:30,03
+from the opacity of one to an opacity of zero.
+
+35
+00:01:30,03 --> 00:01:32,02
+So let's apply these key frame animations
+
+36
+00:01:32,02 --> 00:01:34,07
+to our SVG elements.
+
+37
+00:01:34,07 --> 00:01:36,03
+Since our SVG is in line,
+
+38
+00:01:36,03 --> 00:01:39,02
+we can target its internal objects like our two heart shapes
+
+39
+00:01:39,02 --> 00:01:41,06
+with CSS selectors.
+
+40
+00:01:41,06 --> 00:01:44,04
+Like we saw in the HTML, I gave them both IDs,
+
+41
+00:01:44,04 --> 00:01:46,00
+so these are the two selectors I'll use
+
+42
+00:01:46,00 --> 00:01:48,03
+to target those internal SVG shapes,
+
+43
+00:01:48,03 --> 00:01:52,05
+the heart fill and outline, like the IDs I gave them.
+
+44
+00:01:52,05 --> 00:01:55,07
+Our filled heart shape is the one with the ID of heart fill.
+
+45
+00:01:55,07 --> 00:02:00,02
+So I'll start applying the animations to that one first.
+
+46
+00:02:00,02 --> 00:02:02,02
+And I know I'm going to use the beat animation
+
+47
+00:02:02,02 --> 00:02:03,04
+as I described.
+
+48
+00:02:03,04 --> 00:02:07,07
+I'll give that a duration of 0.8 seconds
+
+49
+00:02:07,07 --> 00:02:11,02
+and the easing of linear.
+
+50
+00:02:11,02 --> 00:02:14,01
+Then I'm going to use a comma to separate the two animations
+
+51
+00:02:14,01 --> 00:02:16,08
+because I want to apply the fade to the shape as well.
+
+52
+00:02:16,08 --> 00:02:19,03
+I think it'll look a lot nicer if it kind of fades in,
+
+53
+00:02:19,03 --> 00:02:21,04
+instead of just appears even when it's starting
+
+54
+00:02:21,04 --> 00:02:23,06
+at that very small size.
+
+55
+00:02:23,06 --> 00:02:25,04
+So we'll apply the fade key frames.
+
+56
+00:02:25,04 --> 00:02:29,02
+I'll give that a very short duration of 0.25 seconds.
+
+57
+00:02:29,02 --> 00:02:31,03
+And I'm going to have that set of key frames play
+
+58
+00:02:31,03 --> 00:02:34,01
+in reverse so it fades in.
+
+59
+00:02:34,01 --> 00:02:37,05
+And I'll give it the fill mode of both.
+
+60
+00:02:37,05 --> 00:02:40,06
+So that should take care of our heart fill scaling up
+
+61
+00:02:40,06 --> 00:02:41,08
+and in to view.
+
+62
+00:02:41,08 --> 00:02:44,05
+But if we save and preview our file now,
+
+63
+00:02:44,05 --> 00:02:48,05
+things may not look exactly as you expected.
+
+64
+00:02:48,05 --> 00:02:50,06
+And here we've run into one of the big things
+
+65
+00:02:50,06 --> 00:02:53,01
+that makes animating SVG elements different
+
+66
+00:02:53,01 --> 00:02:54,08
+from animating dom elements
+
+67
+00:02:54,08 --> 00:02:58,04
+and that's the SVG coordinate space.
+
+68
+00:02:58,04 --> 00:03:00,09
+The complexities of SVG coordinate space are more
+
+69
+00:03:00,09 --> 00:03:02,06
+than we can get into in this course.
+
+70
+00:03:02,06 --> 00:03:05,02
+But the key point to know is that the origin point
+
+71
+00:03:05,02 --> 00:03:08,02
+of SVGs coordinate system is at the top left.
+
+72
+00:03:08,02 --> 00:03:10,09
+And that's also the point from which SVG child elements
+
+73
+00:03:10,09 --> 00:03:12,09
+will transform from by default.
+
+74
+00:03:12,09 --> 00:03:14,01
+And that's what we're seeing here.
+
+75
+00:03:14,01 --> 00:03:16,02
+It's coming from the top left instead of the middle
+
+76
+00:03:16,02 --> 00:03:18,05
+of the heart shape itself.
+
+77
+00:03:18,05 --> 00:03:21,00
+Luckily we can make some adjustments in our CSS
+
+78
+00:03:21,00 --> 00:03:23,02
+to make the heart scale from the middle of itself
+
+79
+00:03:23,02 --> 00:03:27,00
+instead of the top left of the SVG.
+
+80
+00:03:27,00 --> 00:03:30,04
+And there are two properties I'm going to use to do this.
+
+81
+00:03:30,04 --> 00:03:36,06
+The first is setting a transform origin of 50% 50%,
+
+82
+00:03:36,06 --> 00:03:40,00
+which essentially says use a transformed point from 50%
+
+83
+00:03:40,00 --> 00:03:42,04
+across the element and 50% down the element,
+
+84
+00:03:42,04 --> 00:03:45,02
+so the middle of the element.
+
+85
+00:03:45,02 --> 00:03:46,09
+This new transform origin point though,
+
+86
+00:03:46,09 --> 00:03:50,04
+will still typically calculate from the SVG itself.
+
+87
+00:03:50,04 --> 00:03:52,01
+So that top left position.
+
+88
+00:03:52,01 --> 00:03:54,01
+So we can add one additional property
+
+89
+00:03:54,01 --> 00:03:57,02
+to tell the heart shape to calculate is transform origin
+
+90
+00:03:57,02 --> 00:03:59,02
+from within the shape itself
+
+91
+00:03:59,02 --> 00:04:01,09
+instead of the SVG it's a part of.
+
+92
+00:04:01,09 --> 00:04:05,00
+And that property is the property of transform box
+
+93
+00:04:05,00 --> 00:04:08,02
+and we'll set this to fill box.
+
+94
+00:04:08,02 --> 00:04:10,09
+And this means that the transform origin will be calculated
+
+95
+00:04:10,09 --> 00:04:14,02
+based on the fill box of our heart shape.
+
+96
+00:04:14,02 --> 00:04:16,00
+And that's more the look that we want.
+
+97
+00:04:16,00 --> 00:04:18,08
+So if we save now with those two properties added
+
+98
+00:04:18,08 --> 00:04:20,09
+and refresh our heart animation,
+
+99
+00:04:20,09 --> 00:04:23,04
+our heart is now scaling up from the middle of itself
+
+100
+00:04:23,04 --> 00:04:27,01
+instead of the top left of the SVG.
+
+101
+00:04:27,01 --> 00:04:29,07
+As one last step, I'll add the fade key frames
+
+102
+00:04:29,07 --> 00:04:31,08
+to our heart outline shape as well.
+
+103
+00:04:31,08 --> 00:04:34,09
+That way it will fade out as the fill is scaling in,
+
+104
+00:04:34,09 --> 00:04:38,04
+just for a little subtle difference on the effect.
+
+105
+00:04:38,04 --> 00:04:40,06
+So I gave that shape the ID outline,
+
+106
+00:04:40,06 --> 00:04:42,07
+and I'll add an animation to it.
+
+107
+00:04:42,07 --> 00:04:44,08
+I'll give it the animation of fade.
+
+108
+00:04:44,08 --> 00:04:48,00
+I'm going to have the animation take 0.25 seconds,
+
+109
+00:04:48,00 --> 00:04:50,02
+and I'm going to delay it by 0.4 seconds
+
+110
+00:04:50,02 --> 00:04:53,06
+so it doesn't start fading out quite right away.
+
+111
+00:04:53,06 --> 00:04:55,06
+I'll give it the easing of linear
+
+112
+00:04:55,06 --> 00:04:58,08
+and the fill mode of both as well.
+
+113
+00:04:58,08 --> 00:05:00,00
+So now when we save that
+
+114
+00:05:00,00 --> 00:05:02,03
+and preview our animation once more,
+
+115
+00:05:02,03 --> 00:05:04,09
+we can see that subtle difference of the outline fading out
+
+116
+00:05:04,09 --> 00:05:08,05
+just before the fill fully scales in.
+
+117
+00:05:08,05 --> 00:05:09,06
+So there you have it.
+
+118
+00:05:09,06 --> 00:05:12,00
+We've animated SVG elements with CSS,
+
+119
+00:05:12,00 --> 00:05:13,09
+and that's pretty powerful.
+
+120
+00:05:13,09 --> 00:05:15,09
+Animating SVG with CSS is useful
+
+121
+00:05:15,09 --> 00:05:18,00
+for small bits of animation.
+
+122
+00:05:18,00 --> 00:05:21,01
+But if you're planning on doing a lot of SVG animation,
+
+123
+00:05:21,01 --> 00:05:23,05
+I highly recommend using a JavaScript solution
+
+124
+00:05:23,05 --> 00:05:27,07
+like GreenSock or another JavaScript animation library.
+
+125
+00:05:27,07 --> 00:05:30,06
+JavaScript animation libraries and especially GreenSock
+
+126
+00:05:30,06 --> 00:05:32,05
+are built to take care of the common quirks
+
+127
+00:05:32,05 --> 00:05:35,08
+of animating SVG for you right out of the box.
+
+128
+00:05:35,08 --> 00:05:39,00
+So using one of them can save you a lot of time and effort.
+

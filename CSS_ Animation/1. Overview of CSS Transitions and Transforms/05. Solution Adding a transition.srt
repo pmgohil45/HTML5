@@ -1,0 +1,76 @@
+1
+00:00:00,00 --> 00:00:05,05
+(upbeat music begins)
+
+2
+00:00:05,05 --> 00:00:06,08
+- [Narrator] For my solution,
+
+3
+00:00:06,08 --> 00:00:08,07
+I added an additional transition
+
+4
+00:00:08,07 --> 00:00:10,02
+to the border radius property,
+
+5
+00:00:10,02 --> 00:00:13,05
+so my hover now looks like this.
+
+6
+00:00:13,05 --> 00:00:16,09
+To show you what I did, I'll go back to my CSS file.
+
+7
+00:00:16,09 --> 00:00:20,02
+And what I did was add a border radius of 20 pixels
+
+8
+00:00:20,02 --> 00:00:22,00
+to the button's hover styles.
+
+9
+00:00:22,00 --> 00:00:23,08
+And then I added an additional property
+
+10
+00:00:23,08 --> 00:00:26,00
+to the transition for border radius.
+
+11
+00:00:26,00 --> 00:00:28,03
+I gave it a duration of 0.3 seconds,
+
+12
+00:00:28,03 --> 00:00:29,09
+just like our background color,
+
+13
+00:00:29,09 --> 00:00:32,04
+and the same easing of ease in like our background color,
+
+14
+00:00:32,04 --> 00:00:33,07
+just to have a couple of things
+
+15
+00:00:33,07 --> 00:00:36,01
+line up with the same timing and easing.
+
+16
+00:00:36,01 --> 00:00:39,03
+And then the end result is what we saw here.
+
+17
+00:00:39,03 --> 00:00:40,07
+And there we have a hover effect
+
+18
+00:00:40,07 --> 00:00:42,06
+with one more transitioning property,
+
+19
+00:00:42,06 --> 00:00:45,00
+and some practice with CSS transitions.
+

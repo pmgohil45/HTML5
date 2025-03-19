@@ -1,0 +1,244 @@
+1
+00:00:00,05 --> 00:00:03,04
+- [Instructor] Motion Paths are fairly new to CSS right now,
+
+2
+00:00:03,04 --> 00:00:05,01
+but as support for them increases,
+
+3
+00:00:05,01 --> 00:00:08,07
+you'll be able to use them more and more in your own work.
+
+4
+00:00:08,07 --> 00:00:12,09
+CSS Motion Paths are created using the offset-path property.
+
+5
+00:00:12,09 --> 00:00:14,05
+This might sound a bit weird at first,
+
+6
+00:00:14,05 --> 00:00:16,00
+but the reason for this is
+
+7
+00:00:16,00 --> 00:00:17,07
+that you can use the offset-path
+
+8
+00:00:17,07 --> 00:00:19,04
+to do more than just motion.
+
+9
+00:00:19,04 --> 00:00:22,07
+So it makes a little more sense in that context.
+
+10
+00:00:22,07 --> 00:00:24,00
+To create an offset-path,
+
+11
+00:00:24,00 --> 00:00:26,09
+the first thing you need is, well, a path.
+
+12
+00:00:26,09 --> 00:00:30,02
+At the moment, paths defined with SVG path syntax
+
+13
+00:00:30,02 --> 00:00:32,00
+are the most widely supported,
+
+14
+00:00:32,00 --> 00:00:34,04
+but there are other options that may gain greater support
+
+15
+00:00:34,04 --> 00:00:35,06
+in the near future.
+
+16
+00:00:35,06 --> 00:00:40,01
+For now, we'll use the SVG path syntax option.
+
+17
+00:00:40,01 --> 00:00:42,03
+You can get this SVG path definition
+
+18
+00:00:42,03 --> 00:00:46,01
+from anywhere you typically draw or code SVGs.
+
+19
+00:00:46,01 --> 00:00:49,06
+I drew this path here in XD and I'm going to use that
+
+20
+00:00:49,06 --> 00:00:52,04
+for the source of my SVG path code.
+
+21
+00:00:52,04 --> 00:00:56,03
+So for this one, I will right-click and say Copy SVG Code,
+
+22
+00:00:56,03 --> 00:00:57,08
+got that on my clipboard,
+
+23
+00:00:57,08 --> 00:00:59,01
+and then I'll move to my Code Editor
+
+24
+00:00:59,01 --> 00:01:01,05
+just to paste this into a blank document
+
+25
+00:01:01,05 --> 00:01:05,06
+so you can see what kind of code we're working with.
+
+26
+00:01:05,06 --> 00:01:08,05
+In this case, I've copied the code for the entire SVG,
+
+27
+00:01:08,05 --> 00:01:11,01
+which normally would be exactly what I want,
+
+28
+00:01:11,01 --> 00:01:14,02
+but in this case, I only want that path shape,
+
+29
+00:01:14,02 --> 00:01:16,06
+so the only part of this SVG I need
+
+30
+00:01:16,06 --> 00:01:19,02
+is this part right here in the D equals.
+
+31
+00:01:19,02 --> 00:01:23,04
+From this capital N all the way down to the 219.99.
+
+32
+00:01:23,04 --> 00:01:24,06
+Everything within these quotes,
+
+33
+00:01:24,06 --> 00:01:27,08
+that's what we'll need for our path definition.
+
+34
+00:01:27,08 --> 00:01:30,01
+One thing to note if you're getting your path definition
+
+35
+00:01:30,01 --> 00:01:32,01
+from a visual drawing tool,
+
+36
+00:01:32,01 --> 00:01:35,01
+these tools often add a transform onto your path,
+
+37
+00:01:35,01 --> 00:01:38,05
+so for example, I have a transform right here.
+
+38
+00:01:38,05 --> 00:01:41,08
+If you see very large numbers in this transform property,
+
+39
+00:01:41,08 --> 00:01:43,08
+there's a good chance your path will show up
+
+40
+00:01:43,08 --> 00:01:46,02
+in a completely different place than you intend it to,
+
+41
+00:01:46,02 --> 00:01:48,04
+so keep an eye out for that.
+
+42
+00:01:48,04 --> 00:01:50,06
+So I'm going to grab this path definition.
+
+43
+00:01:50,06 --> 00:01:53,04
+I'm going to copy it and head over to my CSS
+
+44
+00:01:53,04 --> 00:01:55,09
+to put this into an offset-path.
+
+45
+00:01:55,09 --> 00:01:57,06
+I'm going to use this path definition
+
+46
+00:01:57,06 --> 00:01:59,06
+to make one of our robots do a loop-de-loop
+
+47
+00:01:59,06 --> 00:02:01,01
+across the screen.
+
+48
+00:02:01,01 --> 00:02:03,06
+That robot is an image with a class of bot,
+
+49
+00:02:03,06 --> 00:02:07,05
+so I'm going to assign it an offset-path property.
+
+50
+00:02:07,05 --> 00:02:08,06
+And in that offset-path,
+
+51
+00:02:08,06 --> 00:02:10,05
+I'm going to use the path definition
+
+52
+00:02:10,05 --> 00:02:12,05
+I just copied from my SVG.
+
+53
+00:02:12,05 --> 00:02:14,08
+So I'll give that the offset-path of path
+
+54
+00:02:14,08 --> 00:02:19,03
+and then paste in the path information I copied from my SVG,
+
+55
+00:02:19,03 --> 00:02:21,05
+finish off that line
+
+56
+00:02:21,05 --> 00:02:24,03
+and I'll save my CSS.
+
+57
+00:02:24,03 --> 00:02:26,07
+If I preview my file and my browser right now,
+
+58
+00:02:26,07 --> 00:02:28,04
+I don't really see anything at all.
+
+59
+00:02:28,04 --> 00:02:31,04
+I have my robot image and it has a path applied,
+
+60
+00:02:31,04 --> 00:02:34,03
+but I haven't told it what to do with that offset-path,
+
+61
+00:02:34,03 --> 00:02:36,00
+and we'll look at how to do that next.
+

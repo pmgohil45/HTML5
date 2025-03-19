@@ -1,0 +1,204 @@
+1
+00:00:00,05 --> 00:00:02,01
+- [Val] The web design community is full
+
+2
+00:00:02,01 --> 00:00:03,01
+of helpful people.
+
+3
+00:00:03,01 --> 00:00:04,02
+And because of that,
+
+4
+00:00:04,02 --> 00:00:05,09
+we've got a lot of great online tools
+
+5
+00:00:05,09 --> 00:00:09,00
+to help you create CSS animation.
+
+6
+00:00:09,00 --> 00:00:11,04
+We've touched on some of these tools throughout the course,
+
+7
+00:00:11,04 --> 00:00:14,08
+and now we'll look at them all in one place.
+
+8
+00:00:14,08 --> 00:00:17,00
+For custom or expanded easing options,
+
+9
+00:00:17,00 --> 00:00:20,02
+cubic-bezier.com and easings.net have you covered.
+
+10
+00:00:20,02 --> 00:00:21,05
+On cubic-bezier.com,
+
+11
+00:00:21,05 --> 00:00:24,04
+you can edit the handles and adjust to your own curve
+
+12
+00:00:24,04 --> 00:00:26,03
+and even preview it right here on the site,
+
+13
+00:00:26,03 --> 00:00:30,00
+as well as copy and paste it for use in your own work.
+
+14
+00:00:30,00 --> 00:00:31,08
+Easings.net lets you preview a number
+
+15
+00:00:31,08 --> 00:00:33,07
+of commonly used easing equations,
+
+16
+00:00:33,07 --> 00:00:36,01
+including the power equations or Penner's equations
+
+17
+00:00:36,01 --> 00:00:37,07
+as they're sometimes called.
+
+18
+00:00:37,07 --> 00:00:40,01
+You can preview each of these to see how they look
+
+19
+00:00:40,01 --> 00:00:43,09
+and also copy the CSS for use in your own work.
+
+20
+00:00:43,09 --> 00:00:46,06
+For optimizing your SVGs before animating them,
+
+21
+00:00:46,06 --> 00:00:50,02
+svgomg is my go-to SVG optimization tool.
+
+22
+00:00:50,02 --> 00:00:51,07
+This is the browser-based version
+
+23
+00:00:51,07 --> 00:00:54,00
+and you can also use other formats of it as well,
+
+24
+00:00:54,00 --> 00:00:56,01
+but this one is my favorite.
+
+25
+00:00:56,01 --> 00:00:57,06
+And speaking of SVG,
+
+26
+00:00:57,06 --> 00:01:00,03
+if you want to do more extensive SVG animation,
+
+27
+00:01:00,03 --> 00:01:01,07
+I highly recommend using
+
+28
+00:01:01,07 --> 00:01:04,04
+the JavaScript animation library, GreenSock.
+
+29
+00:01:04,04 --> 00:01:06,06
+They have specialized plugins for SVG
+
+30
+00:01:06,06 --> 00:01:08,07
+like Draw SVG and Morph SVG
+
+31
+00:01:08,07 --> 00:01:11,03
+that can save you a whole lot of time.
+
+32
+00:01:11,03 --> 00:01:13,07
+Overall, I think it's the best animation library out there
+
+33
+00:01:13,07 --> 00:01:16,08
+to work with SVG animation right now.
+
+34
+00:01:16,08 --> 00:01:19,08
+If you're looking for some ready-made CSS animations
+
+35
+00:01:19,08 --> 00:01:21,03
+to jumpstart a project,
+
+36
+00:01:21,03 --> 00:01:24,08
+the next three sites are all great places to start for that.
+
+37
+00:01:24,08 --> 00:01:30,00
+Animate.css and animxyz.com feature an extensive collection
+
+38
+00:01:30,00 --> 00:01:32,07
+of ready to use CSS animation effects.
+
+39
+00:01:32,07 --> 00:01:35,02
+You can use them out of the box or build off them
+
+40
+00:01:35,02 --> 00:01:36,08
+to create your own animation effects
+
+41
+00:01:36,08 --> 00:01:39,08
+like you've learned in this course.
+
+42
+00:01:39,08 --> 00:01:42,05
+Animistic.net is similar to those last two,
+
+43
+00:01:42,05 --> 00:01:45,04
+but it also has a robust customization visualizer,
+
+44
+00:01:45,04 --> 00:01:47,06
+which can be really useful for learning
+
+45
+00:01:47,06 --> 00:01:51,06
+in addition to customizing the effect you want.
+
+46
+00:01:51,06 --> 00:01:52,09
+And last but not least,
+
+47
+00:01:52,09 --> 00:01:55,01
+browsing codepen.io is a great place
+
+48
+00:01:55,01 --> 00:01:57,03
+to find CSS animation inspiration,
+
+49
+00:01:57,03 --> 00:02:00,05
+and pick up on some new coding techniques.
+
+50
+00:02:00,05 --> 00:02:02,04
+I hope you'll find all of these sites useful
+
+51
+00:02:02,04 --> 00:02:04,00
+in your CSS animation work.
+

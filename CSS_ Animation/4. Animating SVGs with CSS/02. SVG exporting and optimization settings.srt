@@ -1,0 +1,520 @@
+1
+00:00:00,05 --> 00:00:01,08
+- [Instructor] To animate your SVG
+
+2
+00:00:01,08 --> 00:00:04,03
+you'll need to have an inline in your HTML,
+
+3
+00:00:04,03 --> 00:00:06,03
+so you'll want to take a slightly different approach
+
+4
+00:00:06,03 --> 00:00:09,07
+to exporting and optimizing it than you might otherwise.
+
+5
+00:00:09,07 --> 00:00:11,00
+You'll want the code to be readable
+
+6
+00:00:11,00 --> 00:00:14,05
+and manageable while you're working on your animation.
+
+7
+00:00:14,05 --> 00:00:15,08
+Different vector editing tools
+
+8
+00:00:15,08 --> 00:00:19,00
+serve as different levels of options for exporting SVGs,
+
+9
+00:00:19,00 --> 00:00:20,04
+so you might see different options
+
+10
+00:00:20,04 --> 00:00:22,05
+depending on the tool you're using.
+
+11
+00:00:22,05 --> 00:00:25,09
+The main things you'll have options for when exporting SVG
+
+12
+00:00:25,09 --> 00:00:27,01
+are a choice between
+
+13
+00:00:27,01 --> 00:00:30,00
+presentation attributes or internal CSS,
+
+14
+00:00:30,00 --> 00:00:33,04
+a choice between linked images or embedded images,
+
+15
+00:00:33,04 --> 00:00:36,08
+and the option to minify the SVG file.
+
+16
+00:00:36,08 --> 00:00:38,07
+Let's look at each of these options more closely
+
+17
+00:00:38,07 --> 00:00:42,01
+to see what they mean for our exported code.
+
+18
+00:00:42,01 --> 00:00:44,03
+That first option on my list lets you choose
+
+19
+00:00:44,03 --> 00:00:45,03
+whether you prefer to have
+
+20
+00:00:45,03 --> 00:00:48,04
+your SVG's fill and stroke attributes displayed in CSS
+
+21
+00:00:48,04 --> 00:00:49,09
+at the top of your file
+
+22
+00:00:49,09 --> 00:00:55,00
+or as presentation attributes directly on the SVG elements.
+
+23
+00:00:55,00 --> 00:00:57,06
+The choice here is mostly up to personal preference.
+
+24
+00:00:57,06 --> 00:00:59,06
+Both are flexible in similar ways
+
+25
+00:00:59,06 --> 00:01:02,00
+and it just kind of comes down to what you prefer
+
+26
+00:01:02,00 --> 00:01:05,06
+or what's most useful for the way you tend to work.
+
+27
+00:01:05,06 --> 00:01:07,07
+If you choose the CSS option,
+
+28
+00:01:07,07 --> 00:01:10,09
+you'll get a block like this at the top of your SVG file.
+
+29
+00:01:10,09 --> 00:01:12,05
+This makes for an easy central place
+
+30
+00:01:12,05 --> 00:01:15,00
+to make changes to your strokes and fills as needed
+
+31
+00:01:15,00 --> 00:01:16,08
+and you can copy and paste the CSS
+
+32
+00:01:16,08 --> 00:01:20,00
+directly into your CSS file as well.
+
+33
+00:01:20,00 --> 00:01:21,02
+This is my preferred option.
+
+34
+00:01:21,02 --> 00:01:24,00
+But like I said, it's really up to personal preference.
+
+35
+00:01:24,00 --> 00:01:26,03
+If you select presentation attributes,
+
+36
+00:01:26,03 --> 00:01:28,06
+that same information that's in the CSS
+
+37
+00:01:28,06 --> 00:01:31,07
+will instead be attributes on the elements themselves.
+
+38
+00:01:31,07 --> 00:01:35,03
+So for example, this path has the fill set directly on it
+
+39
+00:01:35,03 --> 00:01:40,05
+as opposed to in a block of CSS at the top of the SVG file.
+
+40
+00:01:40,05 --> 00:01:42,03
+Next on the list is the question
+
+41
+00:01:42,03 --> 00:01:45,00
+of linked or embedded images.
+
+42
+00:01:45,00 --> 00:01:46,07
+Personally I rarely have images
+
+43
+00:01:46,07 --> 00:01:49,06
+embedded in my SVG files that I'm animating.
+
+44
+00:01:49,06 --> 00:01:50,07
+But if you do,
+
+45
+00:01:50,07 --> 00:01:52,09
+it's important to know that choosing embed here
+
+46
+00:01:52,09 --> 00:01:55,00
+will result in a higher file size,
+
+47
+00:01:55,00 --> 00:01:57,06
+so link is generally the best choice.
+
+48
+00:01:57,06 --> 00:02:00,02
+Linked images will also give you a greater flexibility
+
+49
+00:02:00,02 --> 00:02:04,07
+to change the image without re-exporting the entire SVG.
+
+50
+00:02:04,07 --> 00:02:06,01
+The biggest one to look out for
+
+51
+00:02:06,01 --> 00:02:09,03
+is the last one on my list about minifying.
+
+52
+00:02:09,03 --> 00:02:11,01
+Minifying your SVG might sound
+
+53
+00:02:11,01 --> 00:02:13,01
+like a good idea for file size,
+
+54
+00:02:13,01 --> 00:02:14,08
+but you'll want to keep the code
+
+55
+00:02:14,08 --> 00:02:16,08
+human-readable while you're animating,
+
+56
+00:02:16,08 --> 00:02:20,08
+and minified code is pretty impossible to read.
+
+57
+00:02:20,08 --> 00:02:22,06
+You can always modify the file later
+
+58
+00:02:22,06 --> 00:02:24,06
+once your animation is finalized,
+
+59
+00:02:24,06 --> 00:02:26,07
+but I highly recommend not minifying
+
+60
+00:02:26,07 --> 00:02:30,04
+while you're in the process of working on your animation.
+
+61
+00:02:30,04 --> 00:02:31,04
+With all that in mind,
+
+62
+00:02:31,04 --> 00:02:35,01
+I'll head to XD to export my SVG file from the last video.
+
+63
+00:02:35,01 --> 00:02:36,01
+So I will go here.
+
+64
+00:02:36,01 --> 00:02:44,09
+I'm going to do File, Export, and Selected.
+
+65
+00:02:44,09 --> 00:02:45,08
+And as I said,
+
+66
+00:02:45,08 --> 00:02:47,07
+I'm going to select Internal CSS.
+
+67
+00:02:47,07 --> 00:02:49,04
+I'm going to select linked images
+
+68
+00:02:49,04 --> 00:02:51,07
+even though it doesn't matter for this particular one
+
+69
+00:02:51,07 --> 00:02:53,02
+'cause I have no images
+
+70
+00:02:53,02 --> 00:02:56,01
+and I'm going to leave the minify unchecked.
+
+71
+00:02:56,01 --> 00:02:57,09
+I'll export my SVG
+
+72
+00:02:57,09 --> 00:02:59,05
+and then we'll move on to our next step
+
+73
+00:02:59,05 --> 00:03:02,01
+of optimizing that SVG.
+
+74
+00:03:02,01 --> 00:03:04,07
+Optimizing your SVG after you've exported it
+
+75
+00:03:04,07 --> 00:03:05,06
+is a good next step
+
+76
+00:03:05,06 --> 00:03:08,06
+because optimizing can lead to better performance.
+
+77
+00:03:08,06 --> 00:03:10,09
+My current SVG optimizer of choice
+
+78
+00:03:10,09 --> 00:03:13,07
+is Jake Archibald's SVGOMG.
+
+79
+00:03:13,07 --> 00:03:16,00
+I like that it's easy to access in the browser
+
+80
+00:03:16,00 --> 00:03:17,07
+and it lets you switch between the code
+
+81
+00:03:17,07 --> 00:03:19,03
+and image preview views
+
+82
+00:03:19,03 --> 00:03:21,03
+so you can make sure your optimizations
+
+83
+00:03:21,03 --> 00:03:25,05
+aren't adversely affecting any visual things in your SVG.
+
+84
+00:03:25,05 --> 00:03:27,05
+Once I'm here, I can upload my SVG
+
+85
+00:03:27,05 --> 00:03:30,01
+just by dragging and dropping it on the site,
+
+86
+00:03:30,01 --> 00:03:34,00
+and you'll see my SVG just like we saw in XD.
+
+87
+00:03:34,00 --> 00:03:35,08
+There are some default optimizations
+
+88
+00:03:35,08 --> 00:03:37,04
+already made for us here
+
+89
+00:03:37,04 --> 00:03:39,08
+and I'm not going to go through every option here.
+
+90
+00:03:39,08 --> 00:03:41,00
+But there are a couple of settings
+
+91
+00:03:41,00 --> 00:03:42,04
+you'll want to watch out for
+
+92
+00:03:42,04 --> 00:03:45,04
+when you're optimizing for animation.
+
+93
+00:03:45,04 --> 00:03:49,00
+The first is this one, Shapes to smaller paths.
+
+94
+00:03:49,00 --> 00:03:51,00
+Small is generally better when you're looking
+
+95
+00:03:51,00 --> 00:03:52,04
+to save file size
+
+96
+00:03:52,04 --> 00:03:54,03
+but this setting may fundamentally change
+
+97
+00:03:54,03 --> 00:03:57,00
+the nature of the objects in your SVG,
+
+98
+00:03:57,00 --> 00:03:59,09
+and that can make them harder to target for animation.
+
+99
+00:03:59,09 --> 00:04:01,08
+So use this one with caution.
+
+100
+00:04:01,08 --> 00:04:04,06
+If your animation relies on having things like circles
+
+101
+00:04:04,06 --> 00:04:06,04
+and rectangles in your SVG,
+
+102
+00:04:06,04 --> 00:04:07,08
+you'll want to turn this off
+
+103
+00:04:07,08 --> 00:04:09,02
+because it will turn those circles
+
+104
+00:04:09,02 --> 00:04:12,01
+and rectangles into paths.
+
+105
+00:04:12,01 --> 00:04:14,00
+In many cases that won't make a difference,
+
+106
+00:04:14,00 --> 00:04:18,02
+but it's one to look out for just in case it does for you.
+
+107
+00:04:18,02 --> 00:04:21,03
+The same goes for this Merge paths option.
+
+108
+00:04:21,03 --> 00:04:23,08
+If you're planning to animate any of your paths,
+
+109
+00:04:23,08 --> 00:04:25,06
+double check that this setting doesn't merge
+
+110
+00:04:25,06 --> 00:04:27,02
+any paths you need to keep separate
+
+111
+00:04:27,02 --> 00:04:29,06
+before going through with the optimization.
+
+112
+00:04:29,06 --> 00:04:32,04
+Merged paths generally means fewer paths.
+
+113
+00:04:32,04 --> 00:04:35,03
+But if you needed those individual paths to animate them,
+
+114
+00:04:35,03 --> 00:04:37,07
+that could be a problem.
+
+115
+00:04:37,07 --> 00:04:39,01
+You'll also want to keep an eye
+
+116
+00:04:39,01 --> 00:04:41,05
+on this Round or rewrite paths.
+
+117
+00:04:41,05 --> 00:04:44,00
+Keeping this turned on is usually fine,
+
+118
+00:04:44,00 --> 00:04:46,08
+but it can cause distortions in the shapes of an SVG
+
+119
+00:04:46,08 --> 00:04:51,00
+especially if that SVG is drawn at a very small size.
+
+120
+00:04:51,00 --> 00:04:51,08
+Most of the time,
+
+121
+00:04:51,08 --> 00:04:53,09
+the default settings are exactly what you need
+
+122
+00:04:53,09 --> 00:04:56,03
+and everything looks good both visually
+
+123
+00:04:56,03 --> 00:04:58,08
+and in the Markup tab.
+
+124
+00:04:58,08 --> 00:05:00,02
+Once you've got your settings in place
+
+125
+00:05:00,02 --> 00:05:01,09
+and everything looks good to you,
+
+126
+00:05:01,09 --> 00:05:05,01
+you can either download your SVG using the Download button
+
+127
+00:05:05,01 --> 00:05:07,01
+or you can go to the Markup tab
+
+128
+00:05:07,01 --> 00:05:09,01
+and copy and paste the code of your SVG
+
+129
+00:05:09,01 --> 00:05:11,03
+directly into your project.
+
+130
+00:05:11,03 --> 00:05:15,00
+Either way, your SVG is optimized and ready to use.
+

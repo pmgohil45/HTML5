@@ -1,0 +1,444 @@
+1
+00:00:00,05 --> 00:00:01,06
+- [Tutor] So far, we've been creating
+
+2
+00:00:01,06 --> 00:00:04,05
+mostly individual animations to create our effects,
+
+3
+00:00:04,05 --> 00:00:05,06
+but in practice,
+
+4
+00:00:05,06 --> 00:00:07,08
+you might want to combine multiple animations
+
+5
+00:00:07,08 --> 00:00:10,08
+to create the overall movement you're going for.
+
+6
+00:00:10,08 --> 00:00:11,06
+In this video,
+
+7
+00:00:11,06 --> 00:00:14,03
+we'll be adding to our up and over text animation
+
+8
+00:00:14,03 --> 00:00:16,06
+and we'll create one more set of key frames
+
+9
+00:00:16,06 --> 00:00:20,09
+to handle the over part of the up and over motion.
+
+10
+00:00:20,09 --> 00:00:24,08
+And the letters will end up hanging upside down.
+
+11
+00:00:24,08 --> 00:00:26,00
+Our HTML and CSS
+
+12
+00:00:26,00 --> 00:00:28,07
+are the same as we left them in the last video.
+
+13
+00:00:28,07 --> 00:00:30,04
+So let's head straight to our CSS
+
+14
+00:00:30,04 --> 00:00:34,00
+to add in the second set of key frames for us to use.
+
+15
+00:00:34,00 --> 00:00:35,03
+For this set of key frames,
+
+16
+00:00:35,03 --> 00:00:37,06
+I want the letters to flip down towards me,
+
+17
+00:00:37,06 --> 00:00:39,03
+so they end up upside down.
+
+18
+00:00:39,03 --> 00:00:41,03
+That's going to be a rotation on the X axis
+
+19
+00:00:41,03 --> 00:00:44,09
+of negative 180 degrees.
+
+20
+00:00:44,09 --> 00:00:46,08
+So I'll start this new set of key frames.
+
+21
+00:00:46,08 --> 00:00:51,03
+I'm going to call it flipDown.
+
+22
+00:00:51,03 --> 00:00:53,02
+And since we'll be using this set of key frames
+
+23
+00:00:53,02 --> 00:00:56,00
+to pick up right where the last set of key frames left off,
+
+24
+00:00:56,00 --> 00:00:58,00
+we can skip straight to the two key frame
+
+25
+00:00:58,00 --> 00:01:00,07
+or the end state of our animation.
+
+26
+00:01:00,07 --> 00:01:04,04
+So our two key frame will be a rotation on the X axis
+
+27
+00:01:04,04 --> 00:01:06,07
+of negative 180 degrees.
+
+28
+00:01:06,07 --> 00:01:10,04
+So that's flipping the letter all the way over.
+
+29
+00:01:10,04 --> 00:01:12,04
+Of course, after defining those key frames,
+
+30
+00:01:12,04 --> 00:01:14,02
+we'll have to assign them to our letters,
+
+31
+00:01:14,02 --> 00:01:18,01
+which we did here in the span rule.
+
+32
+00:01:18,01 --> 00:01:19,08
+And to add a second animation to this element,
+
+33
+00:01:19,08 --> 00:01:23,00
+we're going to use a comma to separate the two animations.
+
+34
+00:01:23,00 --> 00:01:26,08
+So we'll add a comma, and then flip down,
+
+35
+00:01:26,08 --> 00:01:30,04
+we'll give it a duration of one second as well.
+
+36
+00:01:30,04 --> 00:01:34,02
+And I'll use the same custom cubic-bezier.
+
+37
+00:01:34,02 --> 00:01:35,08
+And I'm going to give this second animation,
+
+38
+00:01:35,08 --> 00:01:37,07
+a very long delay.
+
+39
+00:01:37,07 --> 00:01:41,05
+Specifically 0.275 seconds.
+
+40
+00:01:41,05 --> 00:01:44,04
+And I chose 2.75 seconds because that's enough time
+
+41
+00:01:44,04 --> 00:01:47,05
+for all of the letters to perform their flip up animation,
+
+42
+00:01:47,05 --> 00:01:50,02
+have a little bit of a pause between the two animations
+
+43
+00:01:50,02 --> 00:01:52,01
+before this one takes place.
+
+44
+00:01:52,01 --> 00:01:54,05
+So when we're chaining two animations on the same object,
+
+45
+00:01:54,05 --> 00:01:56,09
+the way we have one happen after the other,
+
+46
+00:01:56,09 --> 00:01:58,07
+is by giving the second one a delay
+
+47
+00:01:58,07 --> 00:02:01,03
+that's equal to or longer than the duration
+
+48
+00:02:01,03 --> 00:02:03,04
+of the first one.
+
+49
+00:02:03,04 --> 00:02:05,00
+Last, but not least, I'm going to give this
+
+50
+00:02:05,00 --> 00:02:08,04
+animation film mode of forwards so that way our letters
+
+51
+00:02:08,04 --> 00:02:12,07
+will stay flipped upside down, once the animation is over.
+
+52
+00:02:12,07 --> 00:02:15,00
+We achieved the wave-like offset effect
+
+53
+00:02:15,00 --> 00:02:16,08
+for the flip up animation,
+
+54
+00:02:16,08 --> 00:02:18,07
+by giving each letter a slight delay
+
+55
+00:02:18,07 --> 00:02:21,00
+so that each letter would start just a bit
+
+56
+00:02:21,00 --> 00:02:22,07
+after the one before it.
+
+57
+00:02:22,07 --> 00:02:25,00
+We can add a second delay to all of our letters
+
+58
+00:02:25,00 --> 00:02:26,06
+to apply to the flip down animation,
+
+59
+00:02:26,06 --> 00:02:30,00
+to get that same effect there as well.
+
+60
+00:02:30,00 --> 00:02:31,06
+So I can go to my second letter
+
+61
+00:02:31,06 --> 00:02:34,01
+and just like we comma separated the two animations,
+
+62
+00:02:34,01 --> 00:02:37,04
+we can comma separate the two animation delays
+
+63
+00:02:37,04 --> 00:02:42,00
+to signify which animation each delay applies to.
+
+64
+00:02:42,00 --> 00:02:44,07
+In this case, since this is my second letter,
+
+65
+00:02:44,07 --> 00:02:48,06
+and I know my first letter is starting at 2.75 seconds,
+
+66
+00:02:48,06 --> 00:02:53,00
+I will give my second letter a delay of 2.95 seconds
+
+67
+00:02:53,00 --> 00:02:56,02
+so that it starts 0.2 seconds after the first one.
+
+68
+00:02:56,02 --> 00:02:58,06
+We'll use that same 0.2 second delay
+
+69
+00:02:58,06 --> 00:03:00,06
+throughout second animation as well.
+
+70
+00:03:00,06 --> 00:03:03,01
+And basically we just have to do a lot of adding
+
+71
+00:03:03,01 --> 00:03:05,04
+for those second delays.
+
+72
+00:03:05,04 --> 00:03:11,03
+So our third letter will be 3.15 seconds,
+
+73
+00:03:11,03 --> 00:03:16,06
+and on down the line.
+
+74
+00:03:16,06 --> 00:03:19,04
+And of course, if you're using a CSS pre-processor,
+
+75
+00:03:19,04 --> 00:03:22,01
+you could write a loop to automate these values,
+
+76
+00:03:22,01 --> 00:03:23,02
+but I'm doing it manually
+
+77
+00:03:23,02 --> 00:03:25,01
+since I have such a short number of letters
+
+78
+00:03:25,01 --> 00:03:28,04
+to add delays to.
+
+79
+00:03:28,04 --> 00:03:29,07
+With all those delays in place,
+
+80
+00:03:29,07 --> 00:03:37,01
+let's save and preview how our animation is looking.
+
+81
+00:03:37,01 --> 00:03:40,00
+We have the flip-up animation that we established before,
+
+82
+00:03:40,00 --> 00:03:42,00
+then we have a little bit of a pause,
+
+83
+00:03:42,00 --> 00:03:43,08
+and then our second flipped down animation
+
+84
+00:03:43,08 --> 00:03:45,01
+takes place on the letters,
+
+85
+00:03:45,01 --> 00:03:48,00
+leaving them upside down in the end.
+
+86
+00:03:48,00 --> 00:03:49,09
+It's worth mentioning that we could have pulled off
+
+87
+00:03:49,09 --> 00:03:52,00
+this same effect with one set of key frames,
+
+88
+00:03:52,00 --> 00:03:54,04
+essentially by duplicating the values in the middle
+
+89
+00:03:54,04 --> 00:03:56,00
+to create a hold frame.
+
+90
+00:03:56,00 --> 00:03:58,07
+But it's really up to your preference.
+
+91
+00:03:58,07 --> 00:04:00,09
+Personally, I prefer to split up the animations
+
+92
+00:04:00,09 --> 00:04:03,02
+because it gives me more flexibility.
+
+93
+00:04:03,02 --> 00:04:05,05
+For example, with these two sets of key frames,
+
+94
+00:04:05,05 --> 00:04:07,03
+if I wanted to change the delay value
+
+95
+00:04:07,03 --> 00:04:09,04
+for just the flip down animation,
+
+96
+00:04:09,04 --> 00:04:12,04
+that would be relatively straightforward.
+
+97
+00:04:12,04 --> 00:04:14,08
+So that's how to chain multiple animations on one element
+
+98
+00:04:14,08 --> 00:04:17,08
+using animation delay to space them out.
+
+99
+00:04:17,08 --> 00:04:18,07
+It's a great technique
+
+100
+00:04:18,07 --> 00:04:21,00
+for creating slightly more complex effects
+
+101
+00:04:21,00 --> 00:04:23,06
+or spacing out animations in time.
+
+102
+00:04:23,06 --> 00:04:25,09
+One word of advice, though,
+
+103
+00:04:25,09 --> 00:04:28,05
+if you find yourself creating a chain of animations,
+
+104
+00:04:28,05 --> 00:04:31,05
+that's more than three or four long in CSS,
+
+105
+00:04:31,05 --> 00:04:33,09
+that's a good time to consider moving to JavaScript
+
+106
+00:04:33,09 --> 00:04:36,02
+for your animation efforts.
+
+107
+00:04:36,02 --> 00:04:37,09
+Managing all those delays in order
+
+108
+00:04:37,09 --> 00:04:40,03
+can get really tedious in CSS.
+
+109
+00:04:40,03 --> 00:04:42,01
+And a JavaScript based animation solution,
+
+110
+00:04:42,01 --> 00:04:45,01
+will allow you to control a large number of animations
+
+111
+00:04:45,01 --> 00:04:48,00
+in a more robust and flexible way.
+

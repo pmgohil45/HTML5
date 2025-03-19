@@ -1,0 +1,204 @@
+1
+00:00:00,06 --> 00:00:01,08
+- [Instructor] Let's look at how properties
+
+2
+00:00:01,08 --> 00:00:04,03
+like animation-delay and animation-fill-mode
+
+3
+00:00:04,03 --> 00:00:07,03
+can help us do more with our key frame animations.
+
+4
+00:00:07,03 --> 00:00:10,02
+Both of these properties are ones I use a lot in my work
+
+5
+00:00:10,02 --> 00:00:13,01
+and I bet you'll find them super useful too.
+
+6
+00:00:13,01 --> 00:00:15,00
+We'll start with animation-delay.
+
+7
+00:00:15,00 --> 00:00:16,07
+It works exactly like transition-delay
+
+8
+00:00:16,07 --> 00:00:20,02
+except it's applied to key frame animations.
+
+9
+00:00:20,02 --> 00:00:23,00
+Animation-delay lets you specify a certain amount of time
+
+10
+00:00:23,00 --> 00:00:25,07
+that should pass before the key frame animation takes effect
+
+11
+00:00:25,07 --> 00:00:28,06
+on the object you've applied it to.
+
+12
+00:00:28,06 --> 00:00:30,03
+Let's add a delay to the text animation
+
+13
+00:00:30,03 --> 00:00:33,06
+we've been working on to see how it works.
+
+14
+00:00:33,06 --> 00:00:37,03
+We'll go to our h2 rule and add one more animation property,
+
+15
+00:00:37,03 --> 00:00:41,01
+and that property is animation-delay,
+
+16
+00:00:41,01 --> 00:00:43,00
+and I'll give it a delay of five seconds,
+
+17
+00:00:43,00 --> 00:00:45,08
+which is probably excessively long in most cases,
+
+18
+00:00:45,08 --> 00:00:49,05
+but that way, we'll really be able to see what's happening.
+
+19
+00:00:49,05 --> 00:00:51,00
+Now when we refresh the page,
+
+20
+00:00:51,00 --> 00:00:54,03
+there's a five second delay before animation starts.
+
+21
+00:00:54,03 --> 00:00:57,04
+However, it might not look exactly how you expected.
+
+22
+00:00:57,04 --> 00:00:58,08
+We see the text at full size
+
+23
+00:00:58,08 --> 00:01:02,01
+for those five seconds of the animation-delay.
+
+24
+00:01:02,01 --> 00:01:05,04
+The first key frame of our animation, that 0% key frame,
+
+25
+00:01:05,04 --> 00:01:09,06
+has styles to scale the text down to 20% of its normal size,
+
+26
+00:01:09,06 --> 00:01:12,00
+but that key frame styles are only applied
+
+27
+00:01:12,00 --> 00:01:16,06
+once the animation starts, not during any initial delay.
+
+28
+00:01:16,06 --> 00:01:18,07
+So that's why we see the text at full size
+
+29
+00:01:18,07 --> 00:01:20,02
+during those five seconds delay,
+
+30
+00:01:20,02 --> 00:01:22,06
+even though that's not where the animation starts,
+
+31
+00:01:22,06 --> 00:01:27,03
+and it's also where animation-fill-mode comes in handy.
+
+32
+00:01:27,03 --> 00:01:30,01
+The animation-fill-mode property essentially describes
+
+33
+00:01:30,01 --> 00:01:33,02
+how time around the animations actively play in duration
+
+34
+00:01:33,02 --> 00:01:34,08
+should be handled.
+
+35
+00:01:34,08 --> 00:01:37,02
+That means it lets you control what happens
+
+36
+00:01:37,02 --> 00:01:39,09
+during the delays before an animation starts
+
+37
+00:01:39,09 --> 00:01:44,04
+and also what happens after an animation's duration ends.
+
+38
+00:01:44,04 --> 00:01:46,06
+So if we go back to our CSS,
+
+39
+00:01:46,06 --> 00:01:49,02
+in addition to the animation-delay property,
+
+40
+00:01:49,02 --> 00:01:53,07
+I'm going to add an animation-fill-mode value of backwards.
+
+41
+00:01:53,07 --> 00:01:56,00
+The animation-fill-mode value of backwards
+
+42
+00:01:56,00 --> 00:01:58,09
+means that the styles from the animation's first key frame,
+
+43
+00:01:58,09 --> 00:02:01,02
+in this case, the 0% key frame,
+
+44
+00:02:01,02 --> 00:02:03,03
+will be applied backwards in time
+
+45
+00:02:03,03 --> 00:02:06,09
+to fill the time during our delay.
+
+46
+00:02:06,09 --> 00:02:09,00
+Now when we preview our text animation,
+
+47
+00:02:09,00 --> 00:02:10,09
+we see the behavior we were expecting
+
+48
+00:02:10,09 --> 00:02:13,09
+during that five second delay at the beginning.
+
+49
+00:02:13,09 --> 00:02:16,02
+I bet you're starting to see why animation-delay
+
+50
+00:02:16,02 --> 00:02:18,01
+and animation-fill-mode are two properties
+
+51
+00:02:18,01 --> 00:02:20,00
+that are used together so often.
+

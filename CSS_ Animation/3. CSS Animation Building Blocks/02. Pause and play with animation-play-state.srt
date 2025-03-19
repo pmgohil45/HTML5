@@ -1,0 +1,312 @@
+1
+00:00:00,05 --> 00:00:02,04
+- [Instructor] So far, we've been creating animations
+
+2
+00:00:02,04 --> 00:00:04,06
+that play automatically on page load.
+
+3
+00:00:04,06 --> 00:00:06,06
+But there are definitely times where you might want to
+
+4
+00:00:06,06 --> 00:00:09,07
+change when an animation starts or temporarily pause
+
+5
+00:00:09,07 --> 00:00:11,08
+an animation while it's playing.
+
+6
+00:00:11,08 --> 00:00:14,05
+The animation-play-state property can be very useful
+
+7
+00:00:14,05 --> 00:00:16,09
+for both those things.
+
+8
+00:00:16,09 --> 00:00:19,00
+For this example, we're using this spinning
+
+9
+00:00:19,00 --> 00:00:20,03
+sub sticker image.
+
+10
+00:00:20,03 --> 00:00:22,06
+It's a little silly, but it totally works for what
+
+11
+00:00:22,06 --> 00:00:23,08
+we're demonstrating here.
+
+12
+00:00:23,08 --> 00:00:26,09
+We're going to use the animation-play-state property to have
+
+13
+00:00:26,09 --> 00:00:29,04
+this sub spin only when we're hovering over it.
+
+14
+00:00:29,04 --> 00:00:32,05
+And be paused when we're not.
+
+15
+00:00:32,05 --> 00:00:34,00
+We're using hover in this example,
+
+16
+00:00:34,00 --> 00:00:37,00
+because it's an easy input event for CSS to access.
+
+17
+00:00:37,00 --> 00:00:39,04
+But you might find that changing the animation-play-state
+
+18
+00:00:39,04 --> 00:00:41,03
+on events like click or scroll with the help
+
+19
+00:00:41,03 --> 00:00:43,09
+of JavaScript to be even more useful.
+
+20
+00:00:43,09 --> 00:00:45,08
+I've already got the keyframes for
+
+21
+00:00:45,08 --> 00:00:47,04
+the spinning animation here,
+
+22
+00:00:47,04 --> 00:00:49,06
+and we just saw it in action a minute ago.
+
+23
+00:00:49,06 --> 00:00:52,05
+But I can actually simplify these keyframes even further by
+
+24
+00:00:52,05 --> 00:00:55,04
+removing the 0% keyframe.
+
+25
+00:00:55,04 --> 00:00:58,07
+Without a 0% keyframe, the current styles on our element
+
+26
+00:00:58,07 --> 00:01:00,01
+will be used in its place.
+
+27
+00:01:00,01 --> 00:01:02,07
+And since our 0% keyframes weren't changing anything,
+
+28
+00:01:02,07 --> 00:01:04,07
+it was just a rotation of nothing,
+
+29
+00:01:04,07 --> 00:01:07,05
+that will give us the same results visually.
+
+30
+00:01:07,05 --> 00:01:10,01
+I've also assigned the rotate keyframes to our sticker,
+
+31
+00:01:10,01 --> 00:01:11,08
+giving it a duration of 10 seconds.
+
+32
+00:01:11,08 --> 00:01:13,03
+So it's a slow spin.
+
+33
+00:01:13,03 --> 00:01:15,08
+The animation timing function of linear.
+
+34
+00:01:15,08 --> 00:01:19,01
+And we're having it repeat infinitely.
+
+35
+00:01:19,01 --> 00:01:20,07
+We're using linear for easing here.
+
+36
+00:01:20,07 --> 00:01:23,01
+So there'll be no speed changes while it's spinning.
+
+37
+00:01:23,01 --> 00:01:25,03
+This is one of those cases where linear easing actually
+
+38
+00:01:25,03 --> 00:01:28,00
+looks better than some of the rest.
+
+39
+00:01:28,00 --> 00:01:32,00
+So let's move on to adding the play and pause functionality.
+
+40
+00:01:32,00 --> 00:01:35,00
+The thing we'll want to do is add the animation-play-state
+
+41
+00:01:35,00 --> 00:01:37,02
+property to our sticker so that the animation
+
+42
+00:01:37,02 --> 00:01:39,03
+is paused at first.
+
+43
+00:01:39,03 --> 00:01:42,09
+So we can do that by adding animation-play-state here.
+
+44
+00:01:42,09 --> 00:01:45,08
+And we're going to give it the value of paused.
+
+45
+00:01:45,08 --> 00:01:50,03
+If we save and preview our file right now, I'll refresh it.
+
+46
+00:01:50,03 --> 00:01:53,01
+You can see that our animation is paused.
+
+47
+00:01:53,01 --> 00:01:56,01
+Our sub sticker is not currently spinning.
+
+48
+00:01:56,01 --> 00:01:59,00
+Paused animations aren't as fun as ones that play.
+
+49
+00:01:59,00 --> 00:02:01,00
+So let's add the condition when our animation
+
+50
+00:02:01,00 --> 00:02:02,09
+will actively play.
+
+51
+00:02:02,09 --> 00:02:04,04
+To do that I'm going to start by adding a rule
+
+52
+00:02:04,04 --> 00:02:06,07
+for the sticker hover.
+
+53
+00:02:06,07 --> 00:02:09,08
+The two most useful values that the animation-play-state
+
+54
+00:02:09,08 --> 00:02:13,03
+property can take are the value of paused like we just used,
+
+55
+00:02:13,03 --> 00:02:14,07
+and the value of running.
+
+56
+00:02:14,07 --> 00:02:16,08
+So we'll add the value of running here.
+
+57
+00:02:16,08 --> 00:02:19,06
+While the animation-play-state.
+
+58
+00:02:19,06 --> 00:02:22,00
+And then a value of running.
+
+59
+00:02:22,00 --> 00:02:24,07
+So this means that when we're hovering over the sticker,
+
+60
+00:02:24,07 --> 00:02:27,03
+the animation-play-state will be changed to running.
+
+61
+00:02:27,03 --> 00:02:30,00
+Even though it's initially set to pause on our sticker
+
+62
+00:02:30,00 --> 00:02:32,00
+in the few lines above.
+
+63
+00:02:32,00 --> 00:02:33,09
+So if we save this and preview it now,
+
+64
+00:02:33,09 --> 00:02:35,09
+we'll refresh our page.
+
+65
+00:02:35,09 --> 00:02:39,00
+And our sticker is just hanging out there at first,
+
+66
+00:02:39,00 --> 00:02:41,06
+when we hover over it, it starts spinning.
+
+67
+00:02:41,06 --> 00:02:43,08
+And when we hover off it stops.
+
+68
+00:02:43,08 --> 00:02:45,06
+And you'll notice the animation just picks up
+
+69
+00:02:45,06 --> 00:02:49,07
+where it left off when we hover over it again.
+
+70
+00:02:49,07 --> 00:02:52,05
+You can use the same technique to play and pause a CSS
+
+71
+00:02:52,05 --> 00:02:55,06
+animation on other input triggers using JavaScript.
+
+72
+00:02:55,06 --> 00:02:57,09
+Or just start a whole group of animations playing
+
+73
+00:02:57,09 --> 00:03:01,03
+at the same time, or any other situation where you might
+
+74
+00:03:01,03 --> 00:03:04,07
+want to have one or more animations all start playing,
+
+75
+00:03:04,07 --> 00:03:07,08
+or all pause at the same time.
+
+76
+00:03:07,08 --> 00:03:10,01
+Animation-play-state is an often overlooked property
+
+77
+00:03:10,01 --> 00:03:13,06
+of CSS keyframe animations, but it has a lot of potential
+
+78
+00:03:13,06 --> 00:03:16,00
+to be useful in your animation work.
+

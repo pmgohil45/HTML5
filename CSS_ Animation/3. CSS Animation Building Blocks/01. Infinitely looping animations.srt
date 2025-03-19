@@ -1,0 +1,384 @@
+1
+00:00:00,05 --> 00:00:01,03
+- [Instructor] Let's look
+
+2
+00:00:01,03 --> 00:00:03,08
+at creating infinitely looping animations.
+
+3
+00:00:03,08 --> 00:00:05,08
+CSS is great for this type of animation
+
+4
+00:00:05,08 --> 00:00:08,00
+because of how easily we can set an animation
+
+5
+00:00:08,00 --> 00:00:09,08
+on an infinite loop.
+
+6
+00:00:09,08 --> 00:00:12,00
+We'll be creating a couple of animated clouds
+
+7
+00:00:12,00 --> 00:00:14,01
+that will drift across the sky in Binaryville
+
+8
+00:00:14,01 --> 00:00:16,04
+just like we see here.
+
+9
+00:00:16,04 --> 00:00:19,02
+Both our Binaryville logo and the clouds are images.
+
+10
+00:00:19,02 --> 00:00:20,02
+And in our HTML,
+
+11
+00:00:20,02 --> 00:00:23,06
+we have both the cloud images and the Binaryville images,
+
+12
+00:00:23,06 --> 00:00:25,02
+and we've set them in different divs
+
+13
+00:00:25,02 --> 00:00:26,09
+so we can absolutely position the clouds
+
+14
+00:00:26,09 --> 00:00:29,04
+behind the Binaryville scene.
+
+15
+00:00:29,04 --> 00:00:31,09
+In our CSS, we have rules to set that positioning
+
+16
+00:00:31,09 --> 00:00:35,06
+and we can start to add some animation too.
+
+17
+00:00:35,06 --> 00:00:38,04
+So I'm going to start by adding there at key frames block.
+
+18
+00:00:38,04 --> 00:00:40,01
+And I know we want to have our clouds move
+
+19
+00:00:40,01 --> 00:00:42,05
+from all the way off to the left where we can't see them
+
+20
+00:00:42,05 --> 00:00:45,02
+to somewhere off to the right where they're out of view.
+
+21
+00:00:45,02 --> 00:00:47,03
+So I'm going to start our key frames block
+
+22
+00:00:47,03 --> 00:00:50,08
+and call it float.
+
+23
+00:00:50,08 --> 00:00:52,09
+Then on our 0% key frame,
+
+24
+00:00:52,09 --> 00:00:56,08
+I'm going to add a transform of a translation
+
+25
+00:00:56,08 --> 00:01:00,04
+on the X axis
+
+26
+00:01:00,04 --> 00:01:03,00
+of negative 150 pixels.
+
+27
+00:01:03,00 --> 00:01:05,03
+And I know from looking at my image files,
+
+28
+00:01:05,03 --> 00:01:07,09
+that that will move our clouds all the way off to the left
+
+29
+00:01:07,09 --> 00:01:11,00
+where we can't see them.
+
+30
+00:01:11,00 --> 00:01:13,05
+And then for our 100% key frame,
+
+31
+00:01:13,05 --> 00:01:15,05
+I'm going to move them all the way over to the right,
+
+32
+00:01:15,05 --> 00:01:17,03
+or at least as far as they need to go
+
+33
+00:01:17,03 --> 00:01:20,01
+to not be in view anymore.
+
+34
+00:01:20,01 --> 00:01:27,02
+That'll be a translation on the X axis of 820 pixels.
+
+35
+00:01:27,02 --> 00:01:28,09
+Normally it might take some trial and error
+
+36
+00:01:28,09 --> 00:01:31,02
+to get these numbers right, but I figured them out
+
+37
+00:01:31,02 --> 00:01:33,09
+ahead of time to save us some time here.
+
+38
+00:01:33,09 --> 00:01:35,07
+So now that we have our key frames written,
+
+39
+00:01:35,07 --> 00:01:39,00
+we can assign them to our two different clouds.
+
+40
+00:01:39,00 --> 00:01:42,06
+Our first cloud has a class of cloud01,
+
+41
+00:01:42,06 --> 00:01:44,09
+and we'll assign that cloud this float animation.
+
+42
+00:01:44,09 --> 00:01:46,00
+So we'll use the shorthand.
+
+43
+00:01:46,00 --> 00:01:47,05
+So that's going to be animation
+
+44
+00:01:47,05 --> 00:01:50,00
+and we'll give it the animation name of float.
+
+45
+00:01:50,00 --> 00:01:53,02
+I'm going to give it a long duration of 25 seconds
+
+46
+00:01:53,02 --> 00:01:55,08
+because this float is going to be fairly slow.
+
+47
+00:01:55,08 --> 00:01:59,05
+It's just kind of an ambient cloud situation.
+
+48
+00:01:59,05 --> 00:02:01,06
+I'm going to give it the easing or timing function
+
+49
+00:02:01,06 --> 00:02:04,02
+of linear, just to keep this drift simple.
+
+50
+00:02:04,02 --> 00:02:08,03
+And we're going to have it repeat infinitely.
+
+51
+00:02:08,03 --> 00:02:10,09
+Our second cloud is cloud02
+
+52
+00:02:10,09 --> 00:02:13,03
+and we're going to assign it that same set of key frames,
+
+53
+00:02:13,03 --> 00:02:14,08
+the float key frames,
+
+54
+00:02:14,08 --> 00:02:17,00
+but we're going to change things up just a little bit
+
+55
+00:02:17,00 --> 00:02:18,09
+so they'll be moving at slightly different speeds
+
+56
+00:02:18,09 --> 00:02:22,00
+and won't loop exactly the same way over and over.
+
+57
+00:02:22,00 --> 00:02:25,00
+So first I'll assign it that float animation again,
+
+58
+00:02:25,00 --> 00:02:26,05
+but I'll give it a longer duration
+
+59
+00:02:26,05 --> 00:02:28,08
+so it's moving at a different speed than cloud one.
+
+60
+00:02:28,08 --> 00:02:31,07
+I'll give it a duration of 30 seconds.
+
+61
+00:02:31,07 --> 00:02:35,00
+And I'll also add a delay in our animation shorthand,
+
+62
+00:02:35,00 --> 00:02:37,01
+the second number with time associated with it
+
+63
+00:02:37,01 --> 00:02:38,07
+will be the animation delay
+
+64
+00:02:38,07 --> 00:02:40,08
+so they don't start at exactly the same time,
+
+65
+00:02:40,08 --> 00:02:44,00
+just offset their movement a little bit.
+
+66
+00:02:44,00 --> 00:02:45,08
+I'll also give this one the easing of linear
+
+67
+00:02:45,08 --> 00:02:47,05
+for the same reason as the first
+
+68
+00:02:47,05 --> 00:02:50,08
+and give it the animation iteration count of infinite
+
+69
+00:02:50,08 --> 00:02:53,01
+so that is looping infinitely.
+
+70
+00:02:53,01 --> 00:02:55,08
+The difference in speed and the offset and timing
+
+71
+00:02:55,08 --> 00:02:57,08
+will help make the clouds look slightly different
+
+72
+00:02:57,08 --> 00:02:59,06
+each time they pass through our view
+
+73
+00:02:59,06 --> 00:03:02,05
+and make the looping effect more interesting.
+
+74
+00:03:02,05 --> 00:03:04,07
+One last thing we'll add to cloud two
+
+75
+00:03:04,07 --> 00:03:08,00
+is the animation film mode of backwards.
+
+76
+00:03:08,00 --> 00:03:08,08
+And this will ensure
+
+77
+00:03:08,08 --> 00:03:10,08
+that we don't see cloud two hanging out
+
+78
+00:03:10,08 --> 00:03:13,08
+in its intrinsic position before the key frames take place
+
+79
+00:03:13,08 --> 00:03:16,02
+during that five second delay.
+
+80
+00:03:16,02 --> 00:03:20,05
+If we save this and preview our animation now,
+
+81
+00:03:20,05 --> 00:03:23,00
+our two clouds float through Binaryville
+
+82
+00:03:23,00 --> 00:03:24,09
+and behave just a little bit differently
+
+83
+00:03:24,09 --> 00:03:25,08
+despite the fact
+
+84
+00:03:25,08 --> 00:03:29,05
+that they're using the exact same key frames.
+
+85
+00:03:29,05 --> 00:03:31,08
+We've also used the different durations
+
+86
+00:03:31,08 --> 00:03:33,09
+and the offset in time with the delay
+
+87
+00:03:33,09 --> 00:03:35,08
+to create a little bit of difference
+
+88
+00:03:35,08 --> 00:03:39,00
+each time they come through the scene.
+
+89
+00:03:39,00 --> 00:03:40,06
+Being able to reuse animations
+
+90
+00:03:40,06 --> 00:03:42,04
+on multiple elements like this is a nice feature
+
+91
+00:03:42,04 --> 00:03:44,09
+of CSS animations.
+
+92
+00:03:44,09 --> 00:03:47,04
+Animating multiple elements with the same key frames,
+
+93
+00:03:47,04 --> 00:03:49,08
+but slightly different properties is a great way
+
+94
+00:03:49,08 --> 00:03:52,09
+to get extra mileage out of your key frame animations.
+
+95
+00:03:52,09 --> 00:03:54,07
+You can create all sorts of different effects
+
+96
+00:03:54,07 --> 00:03:58,00
+without ever needing to edit a single key frame at all.
+

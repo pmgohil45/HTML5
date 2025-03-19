@@ -1,0 +1,52 @@
+1
+00:00:00,00 --> 00:00:05,05
+(upbeat music begins)
+
+2
+00:00:05,05 --> 00:00:06,06
+- [Narrator] We've been working on chaining
+
+3
+00:00:06,06 --> 00:00:08,08
+multiple CSS key frame animations together
+
+4
+00:00:08,08 --> 00:00:10,05
+to create longer effects.
+
+5
+00:00:10,05 --> 00:00:12,01
+And for this challenge,
+
+6
+00:00:12,01 --> 00:00:16,01
+I'd like you to add one additional animation to the chain.
+
+7
+00:00:16,01 --> 00:00:18,04
+You can use the files you've been working on already,
+
+8
+00:00:18,04 --> 00:00:22,05
+or the exercise files I've provided for this challenge.
+
+9
+00:00:22,05 --> 00:00:23,09
+This is a nice short challenge.
+
+10
+00:00:23,09 --> 00:00:26,00
+You should spend maybe five or 10 minutes
+
+11
+00:00:26,00 --> 00:00:27,04
+creating a new set of key frames,
+
+12
+00:00:27,04 --> 00:00:29,09
+and then adding it to the chain of animations.
+
+13
+00:00:29,09 --> 00:00:33,00
+Then watch the solution video to see what I made.
+

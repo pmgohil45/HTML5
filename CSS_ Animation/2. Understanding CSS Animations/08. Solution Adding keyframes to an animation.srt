@@ -1,0 +1,84 @@
+1
+00:00:05,05 --> 00:00:07,00
+- [Instructor] Here's my solution to the adding
+
+2
+00:00:07,00 --> 00:00:08,04
+key frames challenge.
+
+3
+00:00:08,04 --> 00:00:10,09
+I replaced our scale in effect with a bit of
+
+4
+00:00:10,09 --> 00:00:12,09
+a wiggle effect.
+
+5
+00:00:12,09 --> 00:00:15,09
+Here's what I did in the CSS.
+
+6
+00:00:15,09 --> 00:00:18,03
+I created a new set of key frames and called it wiggle
+
+7
+00:00:18,03 --> 00:00:21,00
+since I was making a bit of a wiggle effect.
+
+8
+00:00:21,00 --> 00:00:23,08
+And in the key frames, I adjusted both the translation
+
+9
+00:00:23,08 --> 00:00:26,02
+on the X axis and the rotation to give it just a little bit
+
+10
+00:00:26,02 --> 00:00:30,03
+of a movement and a bit of a rotation back and forth.
+
+11
+00:00:30,03 --> 00:00:33,05
+Another thing I changed was the transform origin over h2.
+
+12
+00:00:33,05 --> 00:00:35,07
+And that makes the rotation look just a bit different
+
+13
+00:00:35,07 --> 00:00:38,07
+because we're rotating from a slightly different point.
+
+14
+00:00:38,07 --> 00:00:40,09
+Then I applied the animation of wiggle.
+
+15
+00:00:40,09 --> 00:00:43,09
+I gave it a quite short duration since wiggles generally
+
+16
+00:00:43,09 --> 00:00:45,05
+happen kind of quickly.
+
+17
+00:00:45,05 --> 00:00:48,02
+Had it repeat infinitely and used this cubic-bezier
+
+18
+00:00:48,02 --> 00:00:49,02
+for the easing.
+
+19
+00:00:49,02 --> 00:00:52,04
+There's no right or wrong answer for this challenge.
+
+20
+00:00:52,04 --> 00:00:55,00
+So whatever you did to adjust the key frames and create a
+
+21
+00:00:55,00 --> 00:00:58,00
+slightly different effect, you're on the right track.
+

@@ -1,0 +1,404 @@
+1
+00:00:00,07 --> 00:00:02,04
+- [Narrator] CSS transitions are one of the ways
+
+2
+00:00:02,04 --> 00:00:04,03
+we can create animation with CSS
+
+3
+00:00:04,03 --> 00:00:07,00
+even though they're not called animations.
+
+4
+00:00:07,00 --> 00:00:08,08
+It's confusing, but true.
+
+5
+00:00:08,08 --> 00:00:12,03
+By definition, animation means causing change over time
+
+6
+00:00:12,03 --> 00:00:14,09
+and transitions absolutely do that.
+
+7
+00:00:14,09 --> 00:00:16,04
+They just do it in a different way
+
+8
+00:00:16,04 --> 00:00:19,06
+then CSS key frame animations do.
+
+9
+00:00:19,06 --> 00:00:21,00
+Let's start with creating a button
+
+10
+00:00:21,00 --> 00:00:22,06
+that transforms on hover
+
+11
+00:00:22,06 --> 00:00:26,07
+to take a quick look at what CSS transitions can do.
+
+12
+00:00:26,07 --> 00:00:28,07
+Transitions need a beginning and end state
+
+13
+00:00:28,07 --> 00:00:31,05
+to transition between, that's why we tend to use them
+
+14
+00:00:31,05 --> 00:00:34,00
+for things like hover states.
+
+15
+00:00:34,00 --> 00:00:35,06
+The initial styles on our element,
+
+16
+00:00:35,06 --> 00:00:38,02
+like what we're seeing here, are the beginning state
+
+17
+00:00:38,02 --> 00:00:41,07
+and the hover states we define end up being our end state.
+
+18
+00:00:41,07 --> 00:00:45,06
+So let's start by defining our hover state first.
+
+19
+00:00:45,06 --> 00:00:50,04
+We'll go to our CSS and a hover state for our button
+
+20
+00:00:50,04 --> 00:00:52,04
+and on hover, I'd like to have this button
+
+21
+00:00:52,04 --> 00:00:55,04
+both grow a little bit and change color.
+
+22
+00:00:55,04 --> 00:00:58,02
+So we'll add a transform
+
+23
+00:00:58,02 --> 00:01:01,01
+with a scale to have that growing
+
+24
+00:01:01,01 --> 00:01:04,04
+and we'll make it 1.3 so it'll grow just a little bit
+
+25
+00:01:04,04 --> 00:01:07,04
+and we'll add a background color to change the color,
+
+26
+00:01:07,04 --> 00:01:10,00
+and I'm going to change this to that same purple
+
+27
+00:01:10,00 --> 00:01:12,01
+that we have on the border of the button.
+
+28
+00:01:12,01 --> 00:01:14,06
+And then to make sure we have good contrast,
+
+29
+00:01:14,06 --> 00:01:21,09
+I will also change the color of the text.
+
+30
+00:01:21,09 --> 00:01:26,07
+So if we save that in preview our page now,
+
+31
+00:01:26,07 --> 00:01:29,06
+we have our hover state but it's just a hard cut
+
+32
+00:01:29,06 --> 00:01:31,07
+to those change properties.
+
+33
+00:01:31,07 --> 00:01:35,05
+There's no nice animated change that we wanted to see.
+
+34
+00:01:35,05 --> 00:01:38,01
+So let's go back to our CSS and add a transition
+
+35
+00:01:38,01 --> 00:01:42,00
+to smooth things out.
+
+36
+00:01:42,00 --> 00:01:45,01
+We apply the transition property to our button directly.
+
+37
+00:01:45,01 --> 00:01:47,03
+It's kind of like we're setting a property to say,
+
+38
+00:01:47,03 --> 00:01:50,05
+hey button, if any of your properties happen to change
+
+39
+00:01:50,05 --> 00:01:53,08
+in the future, here's how you should handle it.
+
+40
+00:01:53,08 --> 00:01:57,05
+So add a transition to our button and the minimum we need
+
+41
+00:01:57,05 --> 00:01:59,05
+for a transition is a duration,
+
+42
+00:01:59,05 --> 00:02:03,04
+so we'll set the duration to 0.5 seconds here.
+
+43
+00:02:03,04 --> 00:02:05,04
+This is probably a good time to stop and note
+
+44
+00:02:05,04 --> 00:02:07,09
+that we can use both seconds or milliseconds
+
+45
+00:02:07,09 --> 00:02:09,08
+for durations in CSS.
+
+46
+00:02:09,08 --> 00:02:12,06
+Milliseconds are one one thousandth of a second,
+
+47
+00:02:12,06 --> 00:02:16,07
+so 0.5 seconds is the same as 500 milliseconds
+
+48
+00:02:16,07 --> 00:02:19,06
+and 500 milliseconds is the same as 0.5 seconds.
+
+49
+00:02:19,06 --> 00:02:22,01
+In most cases, it's just a matter of preference
+
+50
+00:02:22,01 --> 00:02:25,02
+as far as which one you prefer to use.
+
+51
+00:02:25,02 --> 00:02:27,03
+So if we save this and go back and preview our button
+
+52
+00:02:27,03 --> 00:02:31,01
+once more, we can see a nice smooth transition when we hover
+
+53
+00:02:31,01 --> 00:02:33,03
+on and off our button.
+
+54
+00:02:33,03 --> 00:02:35,08
+Notice how setting that single transition
+
+55
+00:02:35,08 --> 00:02:38,09
+animates both the movement into the hover,
+
+56
+00:02:38,09 --> 00:02:41,00
+as well as back to the initial properties
+
+57
+00:02:41,00 --> 00:02:43,06
+when we hover off the button.
+
+58
+00:02:43,06 --> 00:02:45,06
+Right now, both our changing properties
+
+59
+00:02:45,06 --> 00:02:47,07
+are transitioning at the same time,
+
+60
+00:02:47,07 --> 00:02:49,07
+but we can have even more granular control
+
+61
+00:02:49,07 --> 00:02:52,04
+over our transition effects by giving each property
+
+62
+00:02:52,04 --> 00:02:56,01
+its own transition values.
+
+63
+00:02:56,01 --> 00:02:57,09
+So let's first assign a transition
+
+64
+00:02:57,09 --> 00:02:59,06
+to just our background property.
+
+65
+00:02:59,06 --> 00:03:03,00
+We can have that take 0.3 seconds and give it an easing
+
+66
+00:03:03,00 --> 00:03:06,00
+of ease-in.
+
+67
+00:03:06,00 --> 00:03:08,01
+Then we comma separate the transitions
+
+68
+00:03:08,01 --> 00:03:10,06
+for our separate properties and we can go
+
+69
+00:03:10,06 --> 00:03:13,01
+and have a separate transition defined
+
+70
+00:03:13,01 --> 00:03:16,00
+for our transform properties.
+
+71
+00:03:16,00 --> 00:03:17,08
+And we'll have this one take slightly less time
+
+72
+00:03:17,08 --> 00:03:24,06
+of 0.2 seconds and give it an easing of ease-in-out.
+
+73
+00:03:24,06 --> 00:03:26,03
+When you're writing multiple transforms,
+
+74
+00:03:26,03 --> 00:03:29,06
+make sure to comma separate the different rules.
+
+75
+00:03:29,06 --> 00:03:33,03
+Now, when we save and preview our button one more time
+
+76
+00:03:33,03 --> 00:03:35,07
+our background color and scale transform
+
+77
+00:03:35,07 --> 00:03:40,02
+change at slightly different rates.
+
+78
+00:03:40,02 --> 00:03:41,04
+Just by separating out
+
+79
+00:03:41,04 --> 00:03:43,07
+these two different transitioning properties,
+
+80
+00:03:43,07 --> 00:03:46,08
+we've created a slightly more nuanced effect.
+
+81
+00:03:46,08 --> 00:03:48,05
+Transitions can also be delayed,
+
+82
+00:03:48,05 --> 00:03:49,09
+so let's add a delay to just one
+
+83
+00:03:49,09 --> 00:03:52,05
+of our transitioning properties to see how that changes
+
+84
+00:03:52,05 --> 00:03:54,03
+the look of things.
+
+85
+00:03:54,03 --> 00:03:56,01
+In the short hand notation I'm using,
+
+86
+00:03:56,01 --> 00:03:58,04
+the second time-based value will be used
+
+87
+00:03:58,04 --> 00:04:00,01
+as the transition delay.
+
+88
+00:04:00,01 --> 00:04:03,03
+So I'll add a 0.1 second delay to the transition
+
+89
+00:04:03,03 --> 00:04:05,07
+on our transform property.
+
+90
+00:04:05,07 --> 00:04:09,00
+So this first time-based value, the 0.2 seconds,
+
+91
+00:04:09,00 --> 00:04:11,00
+is our duration for our transition
+
+92
+00:04:11,00 --> 00:04:14,02
+and that second time-based value, the 0.1 seconds,
+
+93
+00:04:14,02 --> 00:04:17,07
+is the delay for our transform transition.
+
+94
+00:04:17,07 --> 00:04:22,06
+So we'll save that and preview our button one more time.
+
+95
+00:04:22,06 --> 00:04:24,09
+And now we can see that our scale transform
+
+96
+00:04:24,09 --> 00:04:26,09
+starts transitioning just a little bit
+
+97
+00:04:26,09 --> 00:04:31,03
+after our background color starts changing.
+
+98
+00:04:31,03 --> 00:04:33,01
+So that's the basics of how we can create
+
+99
+00:04:33,01 --> 00:04:36,07
+some simple state-based animation with CSS transitions.
+
+100
+00:04:36,07 --> 00:04:39,01
+There are a whole lot of interesting animated effects
+
+101
+00:04:39,01 --> 00:04:41,00
+you can make with transitions.
+

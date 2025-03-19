@@ -1,0 +1,436 @@
+1
+00:00:00,05 --> 00:00:02,01
+- [Instructor] Both Chrome and Firefox browsers
+
+2
+00:00:02,01 --> 00:00:04,04
+have some very useful animation debugging tools
+
+3
+00:00:04,04 --> 00:00:06,04
+within their developer tools.
+
+4
+00:00:06,04 --> 00:00:08,01
+These tools can be extremely helpful
+
+5
+00:00:08,01 --> 00:00:12,00
+both in debugging and designing your CSS animations.
+
+6
+00:00:12,00 --> 00:00:13,07
+They let you see what's going on in the code
+
+7
+00:00:13,07 --> 00:00:17,03
+behind any given CSS animation.
+
+8
+00:00:17,03 --> 00:00:20,04
+Let's take a look at Firefox's tools first.
+
+9
+00:00:20,04 --> 00:00:22,08
+I have one of the animations from earlier in this course
+
+10
+00:00:22,08 --> 00:00:24,08
+open in my Firefox browser.
+
+11
+00:00:24,08 --> 00:00:26,01
+To get to the animation tools,
+
+12
+00:00:26,01 --> 00:00:27,09
+you need to open the web developer tools,
+
+13
+00:00:27,09 --> 00:00:29,09
+which you can do from the tools menu,
+
+14
+00:00:29,09 --> 00:00:32,06
+to browser tools and web developer tools,
+
+15
+00:00:32,06 --> 00:00:35,00
+or you can use the keyboard shortcut.
+
+16
+00:00:35,00 --> 00:00:37,02
+Depending on the layout of your web developer tools,
+
+17
+00:00:37,02 --> 00:00:38,09
+you may need to go to this arrow
+
+18
+00:00:38,09 --> 00:00:40,04
+and make sure animations is checked
+
+19
+00:00:40,04 --> 00:00:42,09
+to be able to see it in this right-hand pane.
+
+20
+00:00:42,09 --> 00:00:44,05
+And I'll also make mine just a little bit bigger
+
+21
+00:00:44,05 --> 00:00:48,02
+so I can see all the sections at once.
+
+22
+00:00:48,02 --> 00:00:49,08
+The details in this tab will only show up
+
+23
+00:00:49,08 --> 00:00:52,01
+once an element or elements have played their animation,
+
+24
+00:00:52,01 --> 00:00:53,06
+so you might need to refresh your page
+
+25
+00:00:53,06 --> 00:00:55,04
+to get them to show up.
+
+26
+00:00:55,04 --> 00:00:57,04
+Once I do, you'll see that my animations pane
+
+27
+00:00:57,04 --> 00:00:58,08
+has been populated,
+
+28
+00:00:58,08 --> 00:01:02,03
+and we can see the element that an animation is applied to.
+
+29
+00:01:02,03 --> 00:01:04,05
+We can see the name of the animation
+
+30
+00:01:04,05 --> 00:01:06,08
+and some general information about it here.
+
+31
+00:01:06,08 --> 00:01:09,00
+And in this bottom pane, we can see more information
+
+32
+00:01:09,00 --> 00:01:11,04
+around which property is being transformed,
+
+33
+00:01:11,04 --> 00:01:13,09
+and we can even hover over each individual keyframe
+
+34
+00:01:13,09 --> 00:01:15,09
+to get the values of that property
+
+35
+00:01:15,09 --> 00:01:18,02
+at each of these keyframes.
+
+36
+00:01:18,02 --> 00:01:20,04
+And if you don't see this lower pane initially,
+
+37
+00:01:20,04 --> 00:01:23,08
+you can just click on that top listing of the animation.
+
+38
+00:01:23,08 --> 00:01:26,03
+From here, we can also scrub through the animation
+
+39
+00:01:26,03 --> 00:01:28,04
+and we can even have it play at different speeds,
+
+40
+00:01:28,04 --> 00:01:30,04
+either very slow or very fast.
+
+41
+00:01:30,04 --> 00:01:32,07
+And I find that playing animations in slow motion
+
+42
+00:01:32,07 --> 00:01:40,06
+can be especially useful for debugging them.
+
+43
+00:01:40,06 --> 00:01:41,07
+One last thing to point out
+
+44
+00:01:41,07 --> 00:01:43,05
+that we'll see in the middle pane
+
+45
+00:01:43,05 --> 00:01:46,00
+when we have the animating element selected,
+
+46
+00:01:46,00 --> 00:01:46,08
+and I'll just refresh
+
+47
+00:01:46,08 --> 00:01:49,04
+so we get our animations populated again,
+
+48
+00:01:49,04 --> 00:01:51,05
+is the easing editor right here.
+
+49
+00:01:51,05 --> 00:01:52,08
+So on this little gray icon,
+
+50
+00:01:52,08 --> 00:01:55,01
+we can open the timing function editor,
+
+51
+00:01:55,01 --> 00:01:56,00
+and this will let us play
+
+52
+00:01:56,00 --> 00:01:57,08
+with different cubic-beizer easing options
+
+53
+00:01:57,08 --> 00:01:59,02
+right within our browser,
+
+54
+00:01:59,02 --> 00:02:01,05
+so that's a pretty neat tool as well.
+
+55
+00:02:01,05 --> 00:02:03,01
+And this tool can be especially helpful
+
+56
+00:02:03,01 --> 00:02:05,00
+when you're trying to get the easing just right
+
+57
+00:02:05,00 --> 00:02:07,06
+for a particular animation.
+
+58
+00:02:07,06 --> 00:02:10,02
+So that's a look at the animation tools in Firefox.
+
+59
+00:02:10,02 --> 00:02:12,01
+Let's take a look at the ones we have available to us
+
+60
+00:02:12,01 --> 00:02:14,05
+in Chrome as well.
+
+61
+00:02:14,05 --> 00:02:17,00
+I have this same animation open in Chrome now,
+
+62
+00:02:17,00 --> 00:02:18,07
+and to get to the Chrome developer tools,
+
+63
+00:02:18,07 --> 00:02:24,06
+we want to go to view, developer, and developer tools.
+
+64
+00:02:24,06 --> 00:02:26,09
+To open up the animation specific pane,
+
+65
+00:02:26,09 --> 00:02:30,02
+you need to go to this three dots menu on the right,
+
+66
+00:02:30,02 --> 00:02:33,03
+go to more tools,
+
+67
+00:02:33,03 --> 00:02:34,06
+and then animations,
+
+68
+00:02:34,06 --> 00:02:37,00
+and you'll get the animation pane opening up below.
+
+69
+00:02:37,00 --> 00:02:39,06
+I'm going to make my dev tools just a bit bigger
+
+70
+00:02:39,06 --> 00:02:42,03
+so we can see what's going on.
+
+71
+00:02:42,03 --> 00:02:44,03
+The first thing you'll see is a message saying
+
+72
+00:02:44,03 --> 00:02:45,08
+listening for animations,
+
+73
+00:02:45,08 --> 00:02:47,04
+and you'll need to trigger your animations
+
+74
+00:02:47,04 --> 00:02:49,03
+with this panel open to inspect them.
+
+75
+00:02:49,03 --> 00:02:52,05
+So I'll refresh the page
+
+76
+00:02:52,05 --> 00:02:54,08
+and now we'll see a little thumbnail
+
+77
+00:02:54,08 --> 00:02:56,06
+which represents our animation.
+
+78
+00:02:56,06 --> 00:02:58,00
+So we can click on that thumbnail
+
+79
+00:02:58,00 --> 00:03:00,09
+to see the animation that it captured.
+
+80
+00:03:00,09 --> 00:03:03,04
+If you have multiple animations going on on your page,
+
+81
+00:03:03,04 --> 00:03:05,02
+you might see multiple thumbnails,
+
+82
+00:03:05,02 --> 00:03:08,08
+but we only have one animation so we only see one thumbnail.
+
+83
+00:03:08,08 --> 00:03:10,07
+Clicking on the thumbnail opens up the timeline
+
+84
+00:03:10,07 --> 00:03:12,03
+for that particular animation.
+
+85
+00:03:12,03 --> 00:03:16,05
+And we can see things like its name, its overall duration,
+
+86
+00:03:16,05 --> 00:03:21,02
+the placement of the keyframes and the easing used.
+
+87
+00:03:21,02 --> 00:03:23,02
+We can also play and pause animation
+
+88
+00:03:23,02 --> 00:03:25,04
+or have it play back at different speeds
+
+89
+00:03:25,04 --> 00:03:36,04
+just like we saw in the Firefox Inspector.
+
+90
+00:03:36,04 --> 00:03:38,05
+In the Chrome Inspector, we can also do things
+
+91
+00:03:38,05 --> 00:03:41,00
+like move the keyframes around in time.
+
+92
+00:03:41,00 --> 00:03:43,07
+But note that any changes you make in this Inspector
+
+93
+00:03:43,07 --> 00:03:45,04
+will not be saved anywhere.
+
+94
+00:03:45,04 --> 00:03:47,00
+So you'll want to make note of any changes
+
+95
+00:03:47,00 --> 00:03:48,09
+you make in this panel.
+
+96
+00:03:48,09 --> 00:03:51,07
+Chrome also has a handy easing editor that you can access
+
+97
+00:03:51,07 --> 00:03:54,05
+from the elements property listing.
+
+98
+00:03:54,05 --> 00:03:57,02
+Look for this dark gray icon next to any easing assignment
+
+99
+00:03:57,02 --> 00:03:59,07
+to open the cubic-bezier editor.
+
+100
+00:03:59,07 --> 00:04:01,06
+And you'll see some very similar functionality
+
+101
+00:04:01,06 --> 00:04:03,07
+to what we saw in the Firefox editor,
+
+102
+00:04:03,07 --> 00:04:06,00
+where we can look through some easing presets,
+
+103
+00:04:06,00 --> 00:04:09,02
+see a little preview and even adjust the handles ourselves
+
+104
+00:04:09,02 --> 00:04:12,09
+to create custom easing right here in our browser.
+
+105
+00:04:12,09 --> 00:04:15,06
+Both of these animation inspectors are hugely helpful
+
+106
+00:04:15,06 --> 00:04:18,02
+for debugging and designing web animation.
+
+107
+00:04:18,02 --> 00:04:19,07
+They've saved me a lot of headaches
+
+108
+00:04:19,07 --> 00:04:22,02
+when animations just weren't playing back as expected
+
+109
+00:04:22,02 --> 00:04:25,00
+and I'm sure there'll be just as helpful for you too.
+

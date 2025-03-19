@@ -1,0 +1,728 @@
+1
+00:00:00,05 --> 00:00:01,07
+- [[Narrator] Easing is one of those things
+
+2
+00:00:01,07 --> 00:00:04,02
+that I don't think web designers talk about enough.
+
+3
+00:00:04,02 --> 00:00:06,08
+The easing you choose has the power to greatly affect
+
+4
+00:00:06,08 --> 00:00:08,03
+the way your animation is perceived
+
+5
+00:00:08,03 --> 00:00:09,08
+and what it communicates.
+
+6
+00:00:09,08 --> 00:00:13,07
+And that makes it an important factor of any animation.
+
+7
+00:00:13,07 --> 00:00:16,00
+By definition, easing is what describes
+
+8
+00:00:16,00 --> 00:00:17,06
+the speed changes of your animation
+
+9
+00:00:17,06 --> 00:00:20,05
+over the course of its duration.
+
+10
+00:00:20,05 --> 00:00:22,07
+Easing is used in many types of animation,
+
+11
+00:00:22,07 --> 00:00:24,04
+and there are almost endless variations
+
+12
+00:00:24,04 --> 00:00:26,04
+of easing functions out there.
+
+13
+00:00:26,04 --> 00:00:28,08
+In CSS, easing is handled by the animation
+
+14
+00:00:28,08 --> 00:00:30,05
+timing function property,
+
+15
+00:00:30,05 --> 00:00:32,06
+or the transition timing function property
+
+16
+00:00:32,06 --> 00:00:35,03
+if you're using transitions.
+
+17
+00:00:35,03 --> 00:00:36,03
+We have three options
+
+18
+00:00:36,03 --> 00:00:38,05
+for defining animation-timing-functions.
+
+19
+00:00:38,05 --> 00:00:41,06
+We have our predefined easing keywords,
+
+20
+00:00:41,06 --> 00:00:45,06
+the steps function, or custom cubic-bezier functions.
+
+21
+00:00:45,06 --> 00:00:47,04
+Let's start our look at easing and CSS
+
+22
+00:00:47,04 --> 00:00:50,08
+with the predefined easing keyword options.
+
+23
+00:00:50,08 --> 00:00:54,06
+The easing keyword options available in CSS are ease,
+
+24
+00:00:54,06 --> 00:00:59,08
+ease-in-out, ease-in, ease-out and linear.
+
+25
+00:00:59,08 --> 00:01:01,09
+These might all sound a little repetitive,
+
+26
+00:01:01,09 --> 00:01:03,08
+but they reflect common patterns you'll see
+
+27
+00:01:03,08 --> 00:01:07,02
+in all sorts of easing, even beyond CSS.
+
+28
+00:01:07,02 --> 00:01:10,00
+Let's go back to one of our robot animations from before
+
+29
+00:01:10,00 --> 00:01:11,02
+and see how these different
+
+30
+00:01:11,02 --> 00:01:13,05
+animation-timing-function keywords
+
+31
+00:01:13,05 --> 00:01:17,02
+can affect the way the animation looks.
+
+32
+00:01:17,02 --> 00:01:19,07
+I don't have an animation-timing-function defined yet.
+
+33
+00:01:19,07 --> 00:01:25,03
+So I'll add one to start things off.
+
+34
+00:01:25,03 --> 00:01:27,08
+And I'll start with a keyword of linear.
+
+35
+00:01:27,08 --> 00:01:30,04
+So we can save that, go to our browser,
+
+36
+00:01:30,04 --> 00:01:38,08
+to preview our robot, and here's what we see.
+
+37
+00:01:38,08 --> 00:01:40,05
+The robot moves across their screen,
+
+38
+00:01:40,05 --> 00:01:43,08
+and it stays at a constant speed the entire time.
+
+39
+00:01:43,08 --> 00:01:46,06
+Linear easing means there's no speeding up or slowing down
+
+40
+00:01:46,06 --> 00:01:48,04
+over the course of an animation.
+
+41
+00:01:48,04 --> 00:01:52,05
+Just one constant rate of change across the entire duration.
+
+42
+00:01:52,05 --> 00:01:54,03
+Linear is the default setting for easing
+
+43
+00:01:54,03 --> 00:01:57,06
+in many other animation tools, but not in CSS.
+
+44
+00:01:57,06 --> 00:01:59,02
+To get linear easing and CSS,
+
+45
+00:01:59,02 --> 00:02:03,00
+you have to set it explicitly like I just did.
+
+46
+00:02:03,00 --> 00:02:06,00
+Linear easing is often perceived as feeling very mechanical
+
+47
+00:02:06,00 --> 00:02:07,09
+since nothing in real life actually moves
+
+48
+00:02:07,09 --> 00:02:09,08
+at a constant speed like that.
+
+49
+00:02:09,08 --> 00:02:11,08
+To be fair, that could work for a robot,
+
+50
+00:02:11,08 --> 00:02:13,08
+but let's keep looking at our other keyword options
+
+51
+00:02:13,08 --> 00:02:16,04
+for easing to see how they compare.
+
+52
+00:02:16,04 --> 00:02:18,08
+If we change our robots, animation-timing-function,
+
+53
+00:02:18,08 --> 00:02:22,02
+to ease-in, we'll start to see some speed changes
+
+54
+00:02:22,02 --> 00:02:24,04
+over the course of its animation.
+
+55
+00:02:24,04 --> 00:02:27,00
+So I'll save this and go back to our robot,
+
+56
+00:02:27,00 --> 00:02:29,03
+refresh it again.
+
+57
+00:02:29,03 --> 00:02:32,01
+The robot starts out a little slow and then speeds up
+
+58
+00:02:32,01 --> 00:02:35,05
+towards the end of the animation when it stops abruptly.
+
+59
+00:02:35,05 --> 00:02:38,02
+It gives it a feel as if the robot is accelerating
+
+60
+00:02:38,02 --> 00:02:40,04
+into the movement and then reaching its top speed
+
+61
+00:02:40,04 --> 00:02:42,07
+near the end of the movement.
+
+62
+00:02:42,07 --> 00:02:44,09
+Any easing function that creates this behavior
+
+63
+00:02:44,09 --> 00:02:47,06
+of accelerating into the movement of the animation
+
+64
+00:02:47,06 --> 00:02:49,04
+could be considered an ease-in.
+
+65
+00:02:49,04 --> 00:02:51,09
+But the easing keyword in CSS refers
+
+66
+00:02:51,09 --> 00:02:55,06
+to one specific definition of easing in.
+
+67
+00:02:55,06 --> 00:02:58,05
+Next up on our list of CSS keyword easing values
+
+68
+00:02:58,05 --> 00:02:59,07
+is ease-out.
+
+69
+00:02:59,07 --> 00:03:02,03
+So we'll just change this a little bit,
+
+70
+00:03:02,03 --> 00:03:04,00
+then we can save and preview to see
+
+71
+00:03:04,00 --> 00:03:07,03
+how our robots movement has changed.
+
+72
+00:03:07,03 --> 00:03:09,05
+With the ease out keyword, our robot starts
+
+73
+00:03:09,05 --> 00:03:12,03
+at a high rate of speed and then starts to decelerate
+
+74
+00:03:12,03 --> 00:03:14,05
+or slow down before it comes to a stop
+
+75
+00:03:14,05 --> 00:03:16,06
+at the end of its movement.
+
+76
+00:03:16,06 --> 00:03:19,00
+Based on what we saw with those last two options,
+
+77
+00:03:19,00 --> 00:03:20,02
+I bet you're starting to guess
+
+78
+00:03:20,02 --> 00:03:22,05
+what the ease-in-out keyword will do.
+
+79
+00:03:22,05 --> 00:03:26,06
+So let's add that to our robot now.
+
+80
+00:03:26,06 --> 00:03:30,07
+Use the animation-timing-function of ease-in-out.
+
+81
+00:03:30,07 --> 00:03:34,02
+When we save that and preview our robot once more,
+
+82
+00:03:34,02 --> 00:03:37,00
+our robot both accelerates into its movement
+
+83
+00:03:37,00 --> 00:03:39,06
+and slows down before coming to a stop.
+
+84
+00:03:39,06 --> 00:03:42,00
+It's the behavior we saw with the ease-in
+
+85
+00:03:42,00 --> 00:03:45,08
+and the ease-out combined in one together.
+
+86
+00:03:45,08 --> 00:03:48,04
+We have one last easing keyword left to see.
+
+87
+00:03:48,04 --> 00:03:50,05
+And that's the keyword of ease.
+
+88
+00:03:50,05 --> 00:03:53,03
+So we'll go back and make our animation-timing-function
+
+89
+00:03:53,03 --> 00:03:55,05
+be just ease.
+
+90
+00:03:55,05 --> 00:03:57,02
+Ease is also the default value
+
+91
+00:03:57,02 --> 00:03:58,09
+for animation-timing-function.
+
+92
+00:03:58,09 --> 00:04:01,01
+So if you've been doing animation before
+
+93
+00:04:01,01 --> 00:04:04,06
+and haven't defined an animation-timing-function explicitly,
+
+94
+00:04:04,06 --> 00:04:07,08
+you are using ease and you just got it by default.
+
+95
+00:04:07,08 --> 00:04:10,07
+If we save our robot with the ease timing function,
+
+96
+00:04:10,07 --> 00:04:18,03
+and then go and preview it, to see how things look,
+
+97
+00:04:18,03 --> 00:04:21,00
+we can see a distinct speeding up into the movement
+
+98
+00:04:21,00 --> 00:04:23,04
+and slowing down before the robot stops.
+
+99
+00:04:23,04 --> 00:04:25,04
+But it's a little bit of a different speeding up
+
+100
+00:04:25,04 --> 00:04:29,04
+and different slowing down than we saw with the ease-in-out.
+
+101
+00:04:29,04 --> 00:04:31,09
+So both the easing we get from the ease keyword
+
+102
+00:04:31,09 --> 00:04:35,05
+and the easing we get from the ease-in-out keyword
+
+103
+00:04:35,05 --> 00:04:37,07
+are variations of the greater category
+
+104
+00:04:37,07 --> 00:04:40,06
+of the ease-in-out pattern.
+
+105
+00:04:40,06 --> 00:04:43,05
+The CSS keywords are a great way to get started with easing,
+
+106
+00:04:43,05 --> 00:04:45,05
+especially if you're brand new to it.
+
+107
+00:04:45,05 --> 00:04:48,02
+But there's even more we can do with easing and CSS.
+
+108
+00:04:48,02 --> 00:04:50,09
+Thanks to the cubic-bezier function.
+
+109
+00:04:50,09 --> 00:04:53,01
+Cubic-bezier functions are one of our options
+
+110
+00:04:53,01 --> 00:04:56,03
+for the animation-timing-function property.
+
+111
+00:04:56,03 --> 00:04:58,09
+Cubic-beziers may look a little bit unusual at first,
+
+112
+00:04:58,09 --> 00:05:01,02
+but we've actually been using them already.
+
+113
+00:05:01,02 --> 00:05:04,00
+Each of those keyword options can also be defined
+
+114
+00:05:04,00 --> 00:05:05,08
+by a cubic-bezier curve.
+
+115
+00:05:05,08 --> 00:05:08,02
+The keywords are a bit like a shortcut
+
+116
+00:05:08,02 --> 00:05:11,04
+to a specific cubic-bezier function.
+
+117
+00:05:11,04 --> 00:05:14,01
+For example, the cubic-bezier equivalent
+
+118
+00:05:14,01 --> 00:05:17,01
+of the ease-out keyword is this cubic-bezier function
+
+119
+00:05:17,01 --> 00:05:19,00
+we're looking at right now.
+
+120
+00:05:19,00 --> 00:05:21,06
+The four numbers in the cubic-bezier function
+
+121
+00:05:21,06 --> 00:05:23,05
+represent two X,Y coordinates.
+
+122
+00:05:23,05 --> 00:05:26,07
+As you can see here on cubic-bezier.com.
+
+123
+00:05:26,07 --> 00:05:29,03
+Sites like cubic-bezier.com, make it easier to visualize
+
+124
+00:05:29,03 --> 00:05:32,00
+what the values of the cubic-bezier functions we'll do
+
+125
+00:05:32,00 --> 00:05:34,04
+by showing you both the function itself,
+
+126
+00:05:34,04 --> 00:05:36,07
+as well as a graph view and a preview
+
+127
+00:05:36,07 --> 00:05:40,02
+of the easing in action.
+
+128
+00:05:40,02 --> 00:05:42,07
+So here's how the cubic-bezier graphs work.
+
+129
+00:05:42,07 --> 00:05:45,05
+The start and end points, or the graph are fixed.
+
+130
+00:05:45,05 --> 00:05:48,06
+Your animation does have to start, and it does have to end.
+
+131
+00:05:48,06 --> 00:05:50,09
+But the cubic-bezier curve describes what happens
+
+132
+00:05:50,09 --> 00:05:53,07
+between the start and end points in time.
+
+133
+00:05:53,07 --> 00:05:55,01
+Moving the two control handles
+
+134
+00:05:55,01 --> 00:05:56,09
+will change the number of the function
+
+135
+00:05:56,09 --> 00:05:59,07
+as well as the shape of the curve.
+
+136
+00:05:59,07 --> 00:06:01,08
+The curve indicates how fast or slow
+
+137
+00:06:01,08 --> 00:06:04,06
+the rate of change will be for the animating property.
+
+138
+00:06:04,06 --> 00:06:06,03
+Where the curve is steepest,
+
+139
+00:06:06,03 --> 00:06:08,00
+the rate of change will be fastest
+
+140
+00:06:08,00 --> 00:06:09,05
+and where the curve is flatter,
+
+141
+00:06:09,05 --> 00:06:11,02
+the rate of change will be slower.
+
+142
+00:06:11,02 --> 00:06:13,03
+So for example, this curve would start out slower,
+
+143
+00:06:13,03 --> 00:06:17,00
+it's a little bit flat and then speed up as it gets steeper.
+
+144
+00:06:17,00 --> 00:06:19,02
+The cubic-bezier function allows you to create
+
+145
+00:06:19,02 --> 00:06:22,07
+just about any variation of easing that you want to use.
+
+146
+00:06:22,07 --> 00:06:24,03
+Another great resource for a system
+
+147
+00:06:24,03 --> 00:06:27,06
+of cubic-bezier functions is on easings.net.
+
+148
+00:06:27,06 --> 00:06:30,04
+This site has both the graph and function representation
+
+149
+00:06:30,04 --> 00:06:32,06
+of commonly used power equations.
+
+150
+00:06:32,06 --> 00:06:34,03
+Also known as the Penner equations
+
+151
+00:06:34,03 --> 00:06:37,00
+translated to cubic-beziers and ready for you to use
+
+152
+00:06:37,00 --> 00:06:39,04
+in your CSS.
+
+153
+00:06:39,04 --> 00:06:41,01
+These same easing curves are available
+
+154
+00:06:41,01 --> 00:06:43,02
+in a lot of animation libraries as well,
+
+155
+00:06:43,02 --> 00:06:46,00
+so their names might look familiar.
+
+156
+00:06:46,00 --> 00:06:47,07
+While we're looking at easings.net,
+
+157
+00:06:47,07 --> 00:06:49,08
+I'm going to pick this one right here
+
+158
+00:06:49,08 --> 00:06:52,02
+and go and copy and paste it's cubic-bezier function
+
+159
+00:06:52,02 --> 00:06:54,05
+so we can use it on our robot.
+
+160
+00:06:54,05 --> 00:06:57,07
+Go back to my CSS, and then we can paste
+
+161
+00:06:57,07 --> 00:06:59,06
+that cubic-bezier function right here
+
+162
+00:06:59,06 --> 00:07:04,01
+for the animation-timing-function property.
+
+163
+00:07:04,01 --> 00:07:07,06
+With that in place, when we go back and preview our robot,
+
+164
+00:07:07,06 --> 00:07:09,06
+it's going to look just a bit different.
+
+165
+00:07:09,06 --> 00:07:12,01
+With that cubic-bezier function in place for easing,
+
+166
+00:07:12,01 --> 00:07:15,00
+we see our robot go a little bit past its destination,
+
+167
+00:07:15,00 --> 00:07:17,05
+kind of overshoot with a tiny bit of a bounce
+
+168
+00:07:17,05 --> 00:07:19,04
+and then settle back into place.
+
+169
+00:07:19,04 --> 00:07:21,04
+And that's all thanks to the cubic-bezier function
+
+170
+00:07:21,04 --> 00:07:23,08
+that we selected.
+
+171
+00:07:23,08 --> 00:07:25,06
+Now that we've taken this more in-depth look
+
+172
+00:07:25,06 --> 00:07:27,07
+into our easing options in CSS,
+
+173
+00:07:27,07 --> 00:07:29,06
+you'll be able to fine tune your animations
+
+174
+00:07:29,06 --> 00:07:31,08
+with easing choices that reflect the feel you want
+
+175
+00:07:31,08 --> 00:07:33,08
+your animations to have.
+
+176
+00:07:33,08 --> 00:07:35,06
+There's so much power to communicate
+
+177
+00:07:35,06 --> 00:07:38,02
+with the easing you select for your animations.
+
+178
+00:07:38,02 --> 00:07:40,04
+I encourage you to find a cubic-beizer editing tool
+
+179
+00:07:40,04 --> 00:07:42,04
+that works best for you and use them
+
+180
+00:07:42,04 --> 00:07:44,08
+in all of your web animation work.
+
+181
+00:07:44,08 --> 00:07:46,04
+It will make your animation efforts look
+
+182
+00:07:46,04 --> 00:07:48,00
+so much more expressive.
+

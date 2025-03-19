@@ -1,0 +1,256 @@
+1
+00:00:00,07 --> 00:00:02,09
+- [Instructor] Animation-film-mode is a very useful property
+
+2
+00:00:02,09 --> 00:00:07,08
+for CSS animation, but it can be a bit confusing at first.
+
+3
+00:00:07,08 --> 00:00:09,01
+The way I like to think of it
+
+4
+00:00:09,01 --> 00:00:10,09
+is that the animation-film-mode property
+
+5
+00:00:10,09 --> 00:00:16,02
+determines how the time around an animation is filled in.
+
+6
+00:00:16,02 --> 00:00:18,07
+Animation-film-mode is set to none by default,
+
+7
+00:00:18,07 --> 00:00:21,08
+which is why you might notice that certain CSS animations
+
+8
+00:00:21,08 --> 00:00:25,00
+like this one here, jump back to their starting position
+
+9
+00:00:25,00 --> 00:00:27,02
+after an animation that moves them somewhere else
+
+10
+00:00:27,02 --> 00:00:29,05
+has completed.
+
+11
+00:00:29,05 --> 00:00:32,00
+The key frames behind that robot animation,
+
+12
+00:00:32,00 --> 00:00:33,08
+tell it to start from where it is
+
+13
+00:00:33,08 --> 00:00:36,02
+and to move 900 pixels to the right.
+
+14
+00:00:36,02 --> 00:00:38,00
+But once it finishes playing,
+
+15
+00:00:38,00 --> 00:00:40,03
+the robot goes right back to where it was
+
+16
+00:00:40,03 --> 00:00:42,05
+and that feels really weird at first.
+
+17
+00:00:42,05 --> 00:00:44,04
+I mean, we just told that to go over there,
+
+18
+00:00:44,04 --> 00:00:46,05
+but now it went back here,
+
+19
+00:00:46,05 --> 00:00:48,06
+and you might notice a similar behavior
+
+20
+00:00:48,06 --> 00:00:52,07
+during animation delays like we saw in the last video.
+
+21
+00:00:52,07 --> 00:00:55,04
+The reason for all this is that CSS animations
+
+22
+00:00:55,04 --> 00:00:57,02
+are temporal in nature.
+
+23
+00:00:57,02 --> 00:00:59,05
+Once the duration of the animation completes,
+
+24
+00:00:59,05 --> 00:01:01,06
+the styles in that animations key frames
+
+25
+00:01:01,06 --> 00:01:04,06
+are no longer acting on the element they animated.
+
+26
+00:01:04,06 --> 00:01:07,05
+That is, not unless we use animation-film-mode
+
+27
+00:01:07,05 --> 00:01:09,09
+to specify we want them to.
+
+28
+00:01:09,09 --> 00:01:12,06
+If you want your animating element to take on the styles
+
+29
+00:01:12,06 --> 00:01:14,07
+of the first keyframe of an animation,
+
+30
+00:01:14,07 --> 00:01:16,02
+in other words, if you want it to look
+
+31
+00:01:16,02 --> 00:01:18,09
+like the first keyframes property's already applied
+
+32
+00:01:18,09 --> 00:01:20,06
+during an animation delay,
+
+33
+00:01:20,06 --> 00:01:24,00
+set your animation-film-mode to backwards.
+
+34
+00:01:24,00 --> 00:01:25,08
+That will take the styling from the first keyframe
+
+35
+00:01:25,08 --> 00:01:29,01
+in the animation and kind of pull it backwards in time
+
+36
+00:01:29,01 --> 00:01:31,05
+during the animation delay.
+
+37
+00:01:31,05 --> 00:01:34,00
+On the other hand, if you want your animating element
+
+38
+00:01:34,00 --> 00:01:36,00
+to stay in place once an animation that moves it
+
+39
+00:01:36,00 --> 00:01:38,02
+has finished, or in other words,
+
+40
+00:01:38,02 --> 00:01:40,01
+you want the element to keep the properties
+
+41
+00:01:40,01 --> 00:01:42,04
+defined in the last keyframe of the animation
+
+42
+00:01:42,04 --> 00:01:44,06
+past the animation's duration,
+
+43
+00:01:44,06 --> 00:01:47,06
+set your animation-film-mode property to forwards.
+
+44
+00:01:47,06 --> 00:01:49,05
+That essentially takes the styles
+
+45
+00:01:49,05 --> 00:01:51,05
+from the last keyframe of the animation
+
+46
+00:01:51,05 --> 00:01:53,03
+and pushes them forward in time
+
+47
+00:01:53,03 --> 00:01:54,09
+or holds them forward in time.
+
+48
+00:01:54,09 --> 00:01:57,02
+However you prefer to think about it.
+
+49
+00:01:57,02 --> 00:01:59,01
+Conveniently, animation-film-mode
+
+50
+00:01:59,01 --> 00:02:01,00
+also has the option of both.
+
+51
+00:02:01,00 --> 00:02:04,09
+Which gives the behavior of forwards and backwards combined.
+
+52
+00:02:04,09 --> 00:02:07,09
+Personally, I tend to use both most often.
+
+53
+00:02:07,09 --> 00:02:09,09
+And I'll even assign it to all my animations
+
+54
+00:02:09,09 --> 00:02:11,02
+when I'm prototyping something
+
+55
+00:02:11,02 --> 00:02:13,03
+even if I'm not sure I need it yet.
+
+56
+00:02:13,03 --> 00:02:14,08
+It saves me that extra step
+
+57
+00:02:14,08 --> 00:02:16,04
+of wondering why things look funny
+
+58
+00:02:16,04 --> 00:02:19,00
+and having to go back and add it in later.
+
+59
+00:02:19,00 --> 00:02:21,08
+You might find that to be a helpful trick too.
+
+60
+00:02:21,08 --> 00:02:24,08
+In any case, know that if the element you're animating
+
+61
+00:02:24,08 --> 00:02:27,05
+isn't looking quite right during any animation delay
+
+62
+00:02:27,05 --> 00:02:29,09
+or after the animation has finished,
+
+63
+00:02:29,09 --> 00:02:31,05
+the animation-film-mode property
+
+64
+00:02:31,05 --> 00:02:34,00
+will most likely fix that for you.
+

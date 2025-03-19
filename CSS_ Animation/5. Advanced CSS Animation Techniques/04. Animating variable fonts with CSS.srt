@@ -1,0 +1,452 @@
+1
+00:00:00,05 --> 00:00:02,02
+- [Instructor] Variable fonts are a game changer
+
+2
+00:00:02,02 --> 00:00:03,08
+for web typography.
+
+3
+00:00:03,08 --> 00:00:06,06
+A variable font is a font file that is able to store
+
+4
+00:00:06,06 --> 00:00:09,00
+a continuous range of design variants
+
+5
+00:00:09,00 --> 00:00:12,06
+and we can animate those variants with CSS.
+
+6
+00:00:12,06 --> 00:00:14,07
+The key to animating variable fonts
+
+7
+00:00:14,07 --> 00:00:17,02
+is the font-variation-settings property.
+
+8
+00:00:17,02 --> 00:00:19,03
+We can animate any access of variation
+
+9
+00:00:19,03 --> 00:00:21,00
+defined in the font itself
+
+10
+00:00:21,00 --> 00:00:24,03
+with the font-variation-settings property.
+
+11
+00:00:24,03 --> 00:00:25,09
+The variants available to animate
+
+12
+00:00:25,09 --> 00:00:27,09
+will vary from font to font
+
+13
+00:00:27,09 --> 00:00:30,06
+and a site like wakamaifondue.com
+
+14
+00:00:30,06 --> 00:00:32,05
+can help show you the options that are available
+
+15
+00:00:32,05 --> 00:00:34,05
+for any given variable font.
+
+16
+00:00:34,05 --> 00:00:36,00
+For example, if I drop a copy
+
+17
+00:00:36,00 --> 00:00:38,06
+of the Recursive variable font on the site,
+
+18
+00:00:38,06 --> 00:00:41,03
+it will give me this report of all the characteristics
+
+19
+00:00:41,03 --> 00:00:44,06
+and variable axes available in this particular font.
+
+20
+00:00:44,06 --> 00:00:46,04
+I can even test them out right here
+
+21
+00:00:46,04 --> 00:00:49,09
+to see what they look like.
+
+22
+00:00:49,09 --> 00:00:52,00
+Many fonts will show their variable properties
+
+23
+00:00:52,00 --> 00:00:56,03
+on their websites as well like Recursive does here.
+
+24
+00:00:56,03 --> 00:00:58,01
+Looking at the demo section of the page,
+
+25
+00:00:58,01 --> 00:01:01,02
+we can see that Recursive has five axes of variation,
+
+26
+00:01:01,02 --> 00:01:05,00
+mono, casual, weight, slant, and cursive.
+
+27
+00:01:05,00 --> 00:01:07,08
+Each axis has its own four-letter name
+
+28
+00:01:07,08 --> 00:01:09,09
+and each of these can take a range of values
+
+29
+00:01:09,09 --> 00:01:13,06
+as shown in the demo.
+
+30
+00:01:13,06 --> 00:01:14,09
+As those values change,
+
+31
+00:01:14,09 --> 00:01:17,02
+the appearance of the font changes
+
+32
+00:01:17,02 --> 00:01:19,03
+and the font-variation-settings property
+
+33
+00:01:19,03 --> 00:01:22,03
+lets us animate those value changes.
+
+34
+00:01:22,03 --> 00:01:26,04
+Let's go look at some of this in action in our own CSS.
+
+35
+00:01:26,04 --> 00:01:29,00
+I'm using the same font we just looked at, Recursive,
+
+36
+00:01:29,00 --> 00:01:31,07
+here in my example.
+
+37
+00:01:31,07 --> 00:01:34,03
+Let's animate some of the variable aspects of Recursive
+
+38
+00:01:34,03 --> 00:01:36,08
+with a key frame animation.
+
+39
+00:01:36,08 --> 00:01:40,02
+So I'll write my key frame block
+
+40
+00:01:40,02 --> 00:01:42,02
+and I'll name this animation VARS
+
+41
+00:01:42,02 --> 00:01:45,03
+since we're animating a variable font.
+
+42
+00:01:45,03 --> 00:01:47,04
+I'll start with my 0% key frame
+
+43
+00:01:47,04 --> 00:01:49,00
+and this is where I can start to use
+
+44
+00:01:49,00 --> 00:01:51,07
+the font-variation-settings property.
+
+45
+00:01:51,07 --> 00:01:54,08
+We know from its site that Recursive has axes
+
+46
+00:01:54,08 --> 00:01:58,07
+for casual, cursive, weight, and slant.
+
+47
+00:01:58,07 --> 00:02:00,07
+I'll use these in the font-variation-settings
+
+48
+00:02:00,07 --> 00:02:02,06
+to create my animation.
+
+49
+00:02:02,06 --> 00:02:06,08
+So we'll start with the font-variation-settings property.
+
+50
+00:02:06,08 --> 00:02:08,01
+And first, I'll use the name
+
+51
+00:02:08,01 --> 00:02:12,02
+of the casual axis which is CASL
+
+52
+00:02:12,02 --> 00:02:15,02
+and start with a value of one.
+
+53
+00:02:15,02 --> 00:02:20,03
+Then onto the cursive axis which is CRSV.
+
+54
+00:02:20,03 --> 00:02:24,00
+Give that a value of one as well.
+
+55
+00:02:24,00 --> 00:02:29,04
+And for weight which is WGHT,
+
+56
+00:02:29,04 --> 00:02:32,03
+we'll go with 300.
+
+57
+00:02:32,03 --> 00:02:35,06
+And slant which is SLNT.
+
+58
+00:02:35,06 --> 00:02:38,08
+We'll give that a value of zero.
+
+59
+00:02:38,08 --> 00:02:39,07
+I'm going to go on
+
+60
+00:02:39,07 --> 00:02:44,00
+and add a couple more key frames for 25% and 75%
+
+61
+00:02:44,00 --> 00:02:46,04
+with different settings in the font-variation-settings
+
+62
+00:02:46,04 --> 00:02:51,06
+just for a little variation in our animation.
+
+63
+00:02:51,06 --> 00:02:58,00
+At 25, I'll set the casual axis to zero.
+
+64
+00:02:58,00 --> 00:03:01,04
+Cursive also to zero.
+
+65
+00:03:01,04 --> 00:03:08,00
+Weight to 600 to get a little bit heftier in the weight
+
+66
+00:03:08,00 --> 00:03:14,03
+and the slant to minus 10.
+
+67
+00:03:14,03 --> 00:03:18,08
+At 75%, I'll set the casual back to zero.
+
+68
+00:03:18,08 --> 00:03:23,06
+The cursive remaining at zero.
+
+69
+00:03:23,06 --> 00:03:27,04
+The weight at 300
+
+70
+00:03:27,04 --> 00:03:32,06
+and our slant at minus 10.
+
+71
+00:03:32,06 --> 00:03:33,07
+And since I'm going to have
+
+72
+00:03:33,07 --> 00:03:36,01
+this animation repeating infinitely,
+
+73
+00:03:36,01 --> 00:03:40,00
+I will make our 100% key frame equal to our 0% key frame
+
+74
+00:03:40,00 --> 00:03:44,00
+so that way it'll start and end in exactly the same place.
+
+75
+00:03:44,00 --> 00:03:45,00
+Last but not least,
+
+76
+00:03:45,00 --> 00:03:48,03
+I'll assign this animation to our h1.
+
+77
+00:03:48,03 --> 00:03:50,09
+So we'll give it animation of VARS
+
+78
+00:03:50,09 --> 00:03:52,07
+and I'll have it take eight seconds.
+
+79
+00:03:52,07 --> 00:03:54,01
+Make it a little bit long.
+
+80
+00:03:54,01 --> 00:03:56,00
+Have it repeat infinitely
+
+81
+00:03:56,00 --> 00:03:58,03
+and I'm going to use the easing of linear
+
+82
+00:03:58,03 --> 00:04:00,03
+just so we can really get a sense
+
+83
+00:04:00,03 --> 00:04:03,07
+of how the variable font itself is changing
+
+84
+00:04:03,07 --> 00:04:06,00
+and animating as it goes.
+
+85
+00:04:06,00 --> 00:04:07,02
+So we can save this
+
+86
+00:04:07,02 --> 00:04:12,08
+and preview it in our browser, refresh.
+
+87
+00:04:12,08 --> 00:04:15,07
+And you can see we have our h1 that has the word hello in it
+
+88
+00:04:15,07 --> 00:04:18,06
+animating through the variations of the axis we adjusted
+
+89
+00:04:18,06 --> 00:04:21,01
+through our key frame animation.
+
+90
+00:04:21,01 --> 00:04:23,00
+There's so much potential in what we can do
+
+91
+00:04:23,00 --> 00:04:24,09
+with animating variable fonts
+
+92
+00:04:24,09 --> 00:04:27,01
+and they allow us to create animation effects
+
+93
+00:04:27,01 --> 00:04:29,05
+that wouldn't be possible without them.
+
+94
+00:04:29,05 --> 00:04:31,08
+But I should note that at the time of recording,
+
+95
+00:04:31,08 --> 00:04:33,09
+variable fonts are still fairly new,
+
+96
+00:04:33,09 --> 00:04:35,07
+so there are a couple of things to keep in mind
+
+97
+00:04:35,07 --> 00:04:38,01
+if you're using them for animation.
+
+98
+00:04:38,01 --> 00:04:41,09
+First is that not all variable fonts are created equal.
+
+99
+00:04:41,09 --> 00:04:44,00
+Some may have very interesting axes
+
+100
+00:04:44,00 --> 00:04:46,02
+for you to animate for creative effects
+
+101
+00:04:46,02 --> 00:04:48,08
+while others may have a very limited range.
+
+102
+00:04:48,08 --> 00:04:50,02
+It might take a bit of time
+
+103
+00:04:50,02 --> 00:04:52,07
+to find the ones that have the range you like.
+
+104
+00:04:52,07 --> 00:04:55,03
+The second is that animating variable fonts
+
+105
+00:04:55,03 --> 00:04:57,04
+is currently not very performant,
+
+106
+00:04:57,04 --> 00:05:00,00
+so it's best to use it sparingly in production.
+
+107
+00:05:00,00 --> 00:05:02,08
+This might change as variable fonts see more use,
+
+108
+00:05:02,08 --> 00:05:05,00
+but keep an eye on your animation performance
+
+109
+00:05:05,00 --> 00:05:08,08
+if you're using variable font animations in your projects.
+
+110
+00:05:08,08 --> 00:05:10,05
+Variable fonts are very interesting
+
+111
+00:05:10,05 --> 00:05:13,00
+to experiment with for many reasons,
+
+112
+00:05:13,00 --> 00:05:14,08
+so I highly recommend checking them out
+
+113
+00:05:14,08 --> 00:05:18,00
+and taking a look at the power they bring to the web.
+

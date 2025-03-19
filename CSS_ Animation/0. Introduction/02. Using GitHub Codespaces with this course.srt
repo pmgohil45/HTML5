@@ -1,0 +1,536 @@
+1
+00:00:00,04 --> 00:00:01,06
+- [Ray] This is Ray Villalobos,
+
+2
+00:00:01,06 --> 00:00:03,09
+Senior Staff Instructor at LinkedIn Learning,
+
+3
+00:00:03,09 --> 00:00:05,03
+and I'm going to show you how to work
+
+4
+00:00:05,03 --> 00:00:09,02
+with LinkedIn Learning courses using GitHub Codespaces.
+
+5
+00:00:09,02 --> 00:00:11,08
+Codespaces is a code editor in the cloud
+
+6
+00:00:11,08 --> 00:00:15,00
+with the full power of Visual Studio Code.
+
+7
+00:00:15,00 --> 00:00:17,05
+It allows for real world, hands-on practice
+
+8
+00:00:17,05 --> 00:00:20,07
+that mirrors software development in the workplace.
+
+9
+00:00:20,07 --> 00:00:24,05
+This course was created using GitHub Codespaces.
+
+10
+00:00:24,05 --> 00:00:27,07
+Using Codespaces, you have everything you need to get going
+
+11
+00:00:27,07 --> 00:00:31,05
+without needing complex installations or build tools.
+
+12
+00:00:31,05 --> 00:00:34,04
+One click and you're ready to go.
+
+13
+00:00:34,04 --> 00:00:35,07
+First, make sure you've signed up
+
+14
+00:00:35,07 --> 00:00:38,07
+for a free GitHub account and that you've logged in.
+
+15
+00:00:38,07 --> 00:00:41,06
+You just see your profile icon right here.
+
+16
+00:00:41,06 --> 00:00:44,00
+When you go to the repository for one of our courses,
+
+17
+00:00:44,00 --> 00:00:49,08
+look for the Code button.
+
+18
+00:00:49,08 --> 00:00:52,01
+Click on Create codespace.
+
+19
+00:00:52,01 --> 00:00:53,09
+The first time you open up a codespace,
+
+20
+00:00:53,09 --> 00:00:58,06
+it might take a few minutes to create the virtual machine.
+
+21
+00:00:58,06 --> 00:01:02,00
+Once it's done, you'll enter the code editor environment.
+
+22
+00:01:02,00 --> 00:01:04,03
+If you're familiar with Visual Studio Code,
+
+23
+00:01:04,03 --> 00:01:05,06
+this is a special version
+
+24
+00:01:05,06 --> 00:01:09,00
+of that editor running on GitHub's servers.
+
+25
+00:01:09,00 --> 00:01:10,07
+The cloud editor's menu lives
+
+26
+00:01:10,07 --> 00:01:14,02
+in a hamburger icon inside the activity bar.
+
+27
+00:01:14,02 --> 00:01:16,05
+The menu will let you see the keyboard shortcuts
+
+28
+00:01:16,05 --> 00:01:18,01
+for your operating system.
+
+29
+00:01:18,01 --> 00:01:21,01
+Let's find the shortcut for the Command Palette.
+
+30
+00:01:21,01 --> 00:01:23,07
+Look in the hamburger menu, under View,
+
+31
+00:01:23,07 --> 00:01:25,04
+and then look for the keyboard shortcut
+
+32
+00:01:25,04 --> 00:01:28,09
+for your operating system.
+
+33
+00:01:28,09 --> 00:01:31,08
+The activity bar has the most common tools you'll need
+
+34
+00:01:31,08 --> 00:01:33,07
+to work with projects.
+
+35
+00:01:33,07 --> 00:01:38,08
+You can, for example, show or hide the Explorer,
+
+36
+00:01:38,08 --> 00:01:41,08
+do a search and replace for content,
+
+37
+00:01:41,08 --> 00:01:46,04
+manage features of the repository, and much more.
+
+38
+00:01:46,04 --> 00:01:49,05
+By the way, if for any reason you lose the activity bar,
+
+39
+00:01:49,05 --> 00:01:56,01
+you can get it back using the Command Palette.
+
+40
+00:01:56,01 --> 00:01:57,02
+Your course can have one
+
+41
+00:01:57,02 --> 00:01:59,04
+or more extensions pre-installed,
+
+42
+00:01:59,04 --> 00:02:01,02
+based on the course you're taking.
+
+43
+00:02:01,02 --> 00:02:07,06
+Those can be found in the Extensions panel.
+
+44
+00:02:07,06 --> 00:02:08,09
+Because this is a browser,
+
+45
+00:02:08,09 --> 00:02:12,00
+it's easy to inadvertently close the browser window
+
+46
+00:02:12,00 --> 00:02:13,06
+and lose the editor.
+
+47
+00:02:13,06 --> 00:02:15,05
+If you do that, don't panic.
+
+48
+00:02:15,05 --> 00:02:17,07
+Codespaces saves everything you're doing
+
+49
+00:02:17,07 --> 00:02:19,03
+on a virtual machine.
+
+50
+00:02:19,03 --> 00:02:21,02
+You can always get the codespace back
+
+51
+00:02:21,02 --> 00:02:24,04
+for this repo by going to the Code menu
+
+52
+00:02:24,04 --> 00:02:32,02
+and finding your codespace right here.
+
+53
+00:02:32,02 --> 00:02:33,08
+Notice that it even remembered
+
+54
+00:02:33,08 --> 00:02:36,08
+that I had opened the Extensions panel.
+
+55
+00:02:36,08 --> 00:02:37,08
+This is a sample
+
+56
+00:02:37,08 --> 00:02:40,02
+of what a multi-branch repository looks like,
+
+57
+00:02:40,02 --> 00:02:41,08
+which is more common when you're working
+
+58
+00:02:41,08 --> 00:02:43,00
+with web frameworks.
+
+59
+00:02:43,00 --> 00:02:45,07
+If you go to the Branch icon on the status bar,
+
+60
+00:02:45,07 --> 00:02:48,08
+you can see that there's more than one branch.
+
+61
+00:02:48,08 --> 00:02:52,00
+You can switch to the different branches using this menu.
+
+62
+00:02:52,00 --> 00:02:53,09
+The branches are named with the chapter
+
+63
+00:02:53,09 --> 00:02:56,05
+and the video number you're watching.
+
+64
+00:02:56,05 --> 00:02:58,05
+If you see a b at the end of the branch,
+
+65
+00:02:58,05 --> 00:03:00,09
+that's how the the code looked at the beginning.
+
+66
+00:03:00,09 --> 00:03:04,02
+If you see an e, that's how the code looked at the end.
+
+67
+00:03:04,02 --> 00:03:07,05
+Let's switch to how the code looked on chapter two
+
+68
+00:03:07,05 --> 00:03:10,01
+and the third video.
+
+69
+00:03:10,01 --> 00:03:13,01
+I'll choose the beginning branch.
+
+70
+00:03:13,01 --> 00:03:14,03
+As you work through a course,
+
+71
+00:03:14,03 --> 00:03:17,01
+you might make some changes on a branch.
+
+72
+00:03:17,01 --> 00:03:18,07
+I'm going to make a minor edit
+
+73
+00:03:18,07 --> 00:03:25,06
+on the index.html file right here.
+
+74
+00:03:25,06 --> 00:03:27,06
+I'm going to go ahead and save that, and you can see
+
+75
+00:03:27,06 --> 00:03:29,06
+that I've modified this file,
+
+76
+00:03:29,06 --> 00:03:31,08
+because there's an M right here
+
+77
+00:03:31,08 --> 00:03:36,00
+and the branch name now has an asterisk on it.
+
+78
+00:03:36,00 --> 00:03:38,05
+If I try to switch to another branch
+
+79
+00:03:38,05 --> 00:03:41,08
+that causes major changes,
+
+80
+00:03:41,08 --> 00:03:44,07
+like, say, 0703e,
+
+81
+00:03:44,07 --> 00:03:48,00
+I may see a dialog box like this.
+
+82
+00:03:48,00 --> 00:03:49,09
+If you don't care about saving your changes,
+
+83
+00:03:49,09 --> 00:03:52,08
+you can simply hit the Force Checkout button.
+
+84
+00:03:52,08 --> 00:03:55,08
+It will let you switch to that branch.
+
+85
+00:03:55,08 --> 00:04:01,03
+You can then choose to discard the changes on this file.
+
+86
+00:04:01,03 --> 00:04:03,04
+Forking lets you create your own copy
+
+87
+00:04:03,04 --> 00:04:05,07
+of the repository on your account,
+
+88
+00:04:05,07 --> 00:04:08,01
+so that you can keep any changes that you've made,
+
+89
+00:04:08,01 --> 00:04:10,07
+even if you've deleted the codespace.
+
+90
+00:04:10,07 --> 00:04:12,00
+To create your own fork,
+
+91
+00:04:12,00 --> 00:04:17,03
+you can click on the Fork button on the repository.
+
+92
+00:04:17,03 --> 00:04:21,07
+I'm going to hit Create fork.
+
+93
+00:04:21,07 --> 00:04:24,09
+I now have my own copy of this repository,
+
+94
+00:04:24,09 --> 00:04:33,04
+and if I want to, I can start a new codespace on that fork.
+
+95
+00:04:33,04 --> 00:04:35,07
+This fork version is almost exactly
+
+96
+00:04:35,07 --> 00:04:37,08
+like the original repository,
+
+97
+00:04:37,08 --> 00:04:40,05
+but it will let you push your own changes.
+
+98
+00:04:40,05 --> 00:04:44,08
+Notice that the URL of the repository is slightly different.
+
+99
+00:04:44,08 --> 00:04:46,06
+Let's go ahead and make a simple change
+
+100
+00:04:46,06 --> 00:04:54,09
+to this file right here.
+
+101
+00:04:54,09 --> 00:04:57,06
+I'm going to save it.
+
+102
+00:04:57,06 --> 00:04:59,06
+You'll note that there's an M right here,
+
+103
+00:04:59,06 --> 00:05:03,02
+as well as an asterisk on this branch.
+
+104
+00:05:03,02 --> 00:05:04,06
+In the Source Control panel,
+
+105
+00:05:04,06 --> 00:05:08,08
+you can also see a one for the change that we just made.
+
+106
+00:05:08,08 --> 00:05:14,03
+Let's go ahead and try to commit this change.
+
+107
+00:05:14,03 --> 00:05:16,06
+I'm going to hit the Commit button,
+
+108
+00:05:16,06 --> 00:05:22,08
+and I'll ask it to go ahead and stage the changes,
+
+109
+00:05:22,08 --> 00:05:25,07
+and then I'm going to hit this button here to commit this
+
+110
+00:05:25,07 --> 00:05:30,02
+onto my own version of the repo.
+
+111
+00:05:30,02 --> 00:05:32,06
+I'll hit OK.
+
+112
+00:05:32,06 --> 00:05:35,04
+You can also let it go ahead and run git fetch.
+
+113
+00:05:35,04 --> 00:05:39,05
+That way it'll automatically sync with your forked repo.
+
+114
+00:05:39,05 --> 00:05:40,08
+Now that change will be stored
+
+115
+00:05:40,08 --> 00:05:44,01
+in your own version of this repository.
+
+116
+00:05:44,01 --> 00:05:46,03
+Don't worry if you forget to fork a repo
+
+117
+00:05:46,03 --> 00:05:48,04
+and then try to push changes.
+
+118
+00:05:48,04 --> 00:05:50,02
+Codespaces will also ask you
+
+119
+00:05:50,02 --> 00:05:53,07
+if you want to create a fork automatically.
+
+120
+00:05:53,07 --> 00:05:55,02
+Some courses will let you work
+
+121
+00:05:55,02 --> 00:05:58,00
+with live previews or create other ports
+
+122
+00:05:58,00 --> 00:06:01,01
+so that you can have a web view of what you're doing.
+
+123
+00:06:01,01 --> 00:06:04,07
+This is managed through the Ports panel in the status bar.
+
+124
+00:06:04,07 --> 00:06:08,01
+Right now, there are no ports forwarded,
+
+125
+00:06:08,01 --> 00:06:15,06
+but if I open up the Live Server extension,
+
+126
+00:06:15,06 --> 00:06:18,06
+you can see a preview of that file.
+
+127
+00:06:18,06 --> 00:06:21,06
+Now, if we go back to the codespace to manage ports,
+
+128
+00:06:21,06 --> 00:06:25,00
+you can click on the icon in the status bar
+
+129
+00:06:25,00 --> 00:06:28,02
+and take a look at the currently available ports.
+
+130
+00:06:28,02 --> 00:06:29,09
+If you want to open this up in a browser,
+
+131
+00:06:29,09 --> 00:06:32,00
+you can click right here.
+
+132
+00:06:32,00 --> 00:06:34,01
+Look for additional course specific tips
+
+133
+00:06:34,01 --> 00:06:35,05
+from the instructor.
+
+134
+00:06:35,05 --> 00:07:32,00
+Now, let's get back to the course.
+

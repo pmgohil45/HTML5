@@ -1,0 +1,368 @@
+1
+00:00:00,05 --> 00:00:01,03
+- [Narrator] Let's get started with some
+
+2
+00:00:01,03 --> 00:00:03,06
+CSS keyframe animation.
+
+3
+00:00:03,06 --> 00:00:06,02
+In this lesson, we'll create a simple animation
+
+4
+00:00:06,02 --> 00:00:08,05
+of tech scaling up into view with a little bit
+
+5
+00:00:08,05 --> 00:00:11,04
+of an overshoot to demonstrate the main components
+
+6
+00:00:11,04 --> 00:00:14,05
+of CSS keyframe animations.
+
+7
+00:00:14,05 --> 00:00:17,02
+The HTML behind our example is pretty straightforward.
+
+8
+00:00:17,02 --> 00:00:21,02
+Our text is in H2 sitting within our container div.
+
+9
+00:00:21,02 --> 00:00:25,01
+If we move to our CSS file, we have some text sizing rules
+
+10
+00:00:25,01 --> 00:00:29,05
+and some basic positioning going on, and that's about it.
+
+11
+00:00:29,05 --> 00:00:31,09
+So let's start adding some animation.
+
+12
+00:00:31,09 --> 00:00:35,04
+There are two main parts to any CSS animation.
+
+13
+00:00:35,04 --> 00:00:37,05
+We need to define the animation keyframes
+
+14
+00:00:37,05 --> 00:00:40,03
+in the @keyframes rule, and then we need to assign
+
+15
+00:00:40,03 --> 00:00:44,02
+those keyframes to a specific element or elements.
+
+16
+00:00:44,02 --> 00:00:46,07
+You can do these two steps in any order,
+
+17
+00:00:46,07 --> 00:00:49,02
+but I prefer to define the animation first
+
+18
+00:00:49,02 --> 00:00:51,07
+and then assign it to something.
+
+19
+00:00:51,07 --> 00:00:53,08
+So moving to our CSS file,
+
+20
+00:00:53,08 --> 00:00:56,01
+we'll start by creating our CSS animation
+
+21
+00:00:56,01 --> 00:01:00,03
+by defining its keyframes using the @keyframes rule.
+
+22
+00:01:00,03 --> 00:01:02,06
+And we'll give this animation a name because otherwise
+
+23
+00:01:02,06 --> 00:01:04,02
+we won't be able to assign it later,
+
+24
+00:01:04,02 --> 00:01:05,08
+and we'll call this one scaleIn
+
+25
+00:01:05,08 --> 00:01:09,06
+because that's essentially the effect we're creating.
+
+26
+00:01:09,06 --> 00:01:11,05
+Once we have our @keyframes block,
+
+27
+00:01:11,05 --> 00:01:13,08
+we define the values for the animating properties
+
+28
+00:01:13,08 --> 00:01:16,04
+at various points during the animation.
+
+29
+00:01:16,04 --> 00:01:18,03
+Any property that you want to have changed
+
+30
+00:01:18,03 --> 00:01:20,05
+over the course of one cycle of the animation
+
+31
+00:01:20,05 --> 00:01:23,07
+needs to be listed in your keyframes.
+
+32
+00:01:23,07 --> 00:01:26,01
+There are multiple options available for how to define
+
+33
+00:01:26,01 --> 00:01:28,08
+the keyframes within your @keyframes rule.
+
+34
+00:01:28,08 --> 00:01:31,02
+We can use key words like to and from
+
+35
+00:01:31,02 --> 00:01:33,02
+for keyframe animations that are animating
+
+36
+00:01:33,02 --> 00:01:35,06
+only between two states, but in my case
+
+37
+00:01:35,06 --> 00:01:38,00
+I'm going to use percentages to define my keyframes
+
+38
+00:01:38,00 --> 00:01:40,01
+for maximum flexibility.
+
+39
+00:01:40,01 --> 00:01:42,08
+The 0% keyframe or the "from" keyframe
+
+40
+00:01:42,08 --> 00:01:44,09
+represents the start of the animation
+
+41
+00:01:44,09 --> 00:01:48,00
+and the 100% keyframe or the "to" keyframe
+
+42
+00:01:48,00 --> 00:01:50,05
+represents the end state of the animation.
+
+43
+00:01:50,05 --> 00:01:52,07
+And we can use percentage values in between
+
+44
+00:01:52,07 --> 00:01:55,03
+to define as many additional stages of the animation
+
+45
+00:01:55,03 --> 00:01:57,08
+as we want along the way.
+
+46
+00:01:57,08 --> 00:02:00,03
+So I'm going to start our text at a small size,
+
+47
+00:02:00,03 --> 00:02:03,09
+say 20% of its full size or a scale of 0.2
+
+48
+00:02:03,09 --> 00:02:07,09
+for our 0% keyframe.
+
+49
+00:02:07,09 --> 00:02:09,07
+For this effect, I know I want it to grow
+
+50
+00:02:09,07 --> 00:02:12,03
+to be a bit oversized before it animates
+
+51
+00:02:12,03 --> 00:02:14,01
+back to its intrinsic size
+
+52
+00:02:14,01 --> 00:02:16,04
+to give it a bit of that overshoot feel.
+
+53
+00:02:16,04 --> 00:02:21,01
+So we'll add a scale of 1.1 or 110% of the given size
+
+54
+00:02:21,01 --> 00:02:24,04
+at the 85% keyframe.
+
+55
+00:02:24,04 --> 00:02:26,03
+And then, at the end of the animation
+
+56
+00:02:26,03 --> 00:02:28,03
+I want things to go back to their given size
+
+57
+00:02:28,03 --> 00:02:30,03
+or a scale of one,
+
+58
+00:02:30,03 --> 00:02:33,07
+so that will be our 100% keyframe.
+
+59
+00:02:33,07 --> 00:02:36,04
+And that completes our @keyframes block.
+
+60
+00:02:36,04 --> 00:02:38,03
+But if we previewed our file right now,
+
+61
+00:02:38,03 --> 00:02:39,05
+nothing would happen.
+
+62
+00:02:39,05 --> 00:02:41,08
+There would be no animation to see.
+
+63
+00:02:41,08 --> 00:02:44,00
+We've defined the keyframes for our animation
+
+64
+00:02:44,00 --> 00:02:46,06
+but we still need to assign it to a specific element
+
+65
+00:02:46,06 --> 00:02:49,00
+in order to see it in action.
+
+66
+00:02:49,00 --> 00:02:51,01
+To assign an animation to an element,
+
+67
+00:02:51,01 --> 00:02:53,09
+we give that element some additional CSS properties.
+
+68
+00:02:53,09 --> 00:02:56,09
+So in this case, that's our H2.
+
+69
+00:02:56,09 --> 00:03:01,04
+The first one we'll need to define is the animation name
+
+70
+00:03:01,04 --> 00:03:03,09
+and we'll set this to be the same thing we called
+
+71
+00:03:03,09 --> 00:03:06,01
+our keyframe block.
+
+72
+00:03:06,01 --> 00:03:08,01
+And this is essentially saying to our H2,
+
+73
+00:03:08,01 --> 00:03:10,07
+hey, use this specific set of keyframes,
+
+74
+00:03:10,07 --> 00:03:13,05
+the one we called scaleIn.
+
+75
+00:03:13,05 --> 00:03:15,07
+The second property we absolutely have to add
+
+76
+00:03:15,07 --> 00:03:20,04
+is animation duration.
+
+77
+00:03:20,04 --> 00:03:22,06
+Our keyframe block defines what will change
+
+78
+00:03:22,06 --> 00:03:24,03
+over the course of the animation
+
+79
+00:03:24,03 --> 00:03:26,06
+but we need to tell it how long to take as well.
+
+80
+00:03:26,06 --> 00:03:30,01
+So let's set this to two seconds.
+
+81
+00:03:30,01 --> 00:03:31,07
+Now when we preview our file
+
+82
+00:03:31,07 --> 00:03:33,05
+we see some animation happening.
+
+83
+00:03:33,05 --> 00:03:35,05
+We've just set the minimum needed to create
+
+84
+00:03:35,05 --> 00:03:37,05
+a CSS keyframe animation.
+
+85
+00:03:37,05 --> 00:03:39,09
+We've got the keyframes, we assigned it to an element
+
+86
+00:03:39,09 --> 00:03:42,01
+and we set a duration.
+
+87
+00:03:42,01 --> 00:03:45,02
+So now we've completed our first CSS keyframe animation,
+
+88
+00:03:45,02 --> 00:03:47,06
+our title scales up with a bit of an overshoot
+
+89
+00:03:47,06 --> 00:03:49,03
+and it's looking pretty neat.
+
+90
+00:03:49,03 --> 00:03:51,02
+Next, we'll look at some additional properties
+
+91
+00:03:51,02 --> 00:03:54,00
+that let us fine tune our animations for even more control
+
+92
+00:03:54,00 --> 00:03:55,00
+over the effect.
+
